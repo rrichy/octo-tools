@@ -1,0 +1,382 @@
+Enemy,Weaknesses,,,,,Location
+Accursed Armor,axe,staff,fire,light,,Lorn Cathedral: Cellars (part 2)
+Aggressive Ant,spear,staff,lightning,,,East Atlasdam Flats
+Albino Bat,spear,bow,staff,dark,,Cave of Origin
+Ambling Bones,staff,wind,light,,,Subterranean Study
+Animated Armor,axe,staff,ice,light,,Shrine of the Starseer
+Antagonistic Ant,dagger,staff,,,,Whistling Cavern
+Armor Eater,sword,axe,wind,,,Road to Morlock's Manse
+Army Ant,sword,dagger,axe,,,Eastern Sunshade Sands
+Ash Raven,spear,dagger,bow,wind,,Carrion Caves
+Assassin Bug,sword,axe,dark,,,Sunshade Catacombs
+Avalanche Mushroom,dagger,fire,lightning,,,The Whitewood
+Azure Urchin,spear,lightning,light,,,Captains' Bane
+Bandit Bones,axe,staff,lightning,light,,The Hollow Throne
+Barnacle Bat,sword,spear,bow,lightning,,Caves of Azure
+Barnacle Crab,dagger,axe,wind,,,Caves of Azure
+Barnacle Tortoise,sword,axe,wind,,,Caves of Azure
+Behemoth,dagger,staff,light,,,Tomb of the Imperator
+Believer I,sword,dagger,axe,light,,Seaside Grotto
+Believer II,sword,dagger,axe,light,,Seaside Grotto
+Black Bat,spear,dagger,bow,ice,,Caves of Maiya
+Black Howler,spear,bow,lightning,,,East Duskbarrow Trail
+Black Scissors,dagger,axe,wind,,,Captains' Bane
+Blood Remnant,sword,spear,axe,ice,,Yvon's Birthplace / Cellar
+Blood Revenant,sword,bow,staff,ice,,Ruins of Eld (lower floor)
+Blood Viper,sword,spear,axe,dark,,Cave of Rhiyo
+Bloody Bull,sword,light,,,,Western Noblecourt Flats
+Bloody Rhino,sword,axe,staff,ice,,South Orewell Pass
+Blue Bull,sword,light,,,,North Riverford Traverse
+Bodyguard I,spear,axe,ice,,,Orlick's Manse
+Bodyguard II,spear,axe,ice,,,Orlick's Manse
+Brawler Bones,axe,staff,fire,light,,Marsalim Catacombs
+Brigand I,sword,dagger,wind,dark,,Brigands' Den
+Brigand II,sword,dagger,wind,dark,,Brigands' Den
+Brigand III,sword,dagger,lightning,dark,,Brigands' Den
+Brigand Bones,axe,staff,fire,light,,Grimsand Ruins (upper floor)
+Brigand Leader I,dagger,axe,fire,light,,Lorn Cathedral: Cellars (part 1)
+Brigand Leader II,dagger,axe,fire,light,,Lorn Cathedral: Cellars (part 1)
+Brigand Leader III,axe,fire,light,,,Lorn Cathedral: Cellars (part 2)
+Buccaneer I,spear,fire,,,,Moonstruck Coast\nMISSABLE past Danger Lv. 31
+Buccaneer II,spear,fire,,,,Moonstruck Coast
+Buccaneer III,spear,bow,lightning,light,,Caves of Azure
+Buccaneer IV,spear,bow,lightning,light,,Caves of Azure
+Buccaneer Bones,dagger,staff,lightning,light,,Captains' Bane
+Cactus Roller,spear,ice,dark,,,Eastern Sunshade Sands\nMISSABLE past Danger Lv. 7
+Cait,sword,dagger,axe,staff,,Tomb of Kings
+Carmine Eagle,spear,bow,wind,,,Black Market
+Carnivorous Bat,sword,spear,bow,ice,,Tomb of the Imperator
+Carnivorous Plant,dagger,staff,fire,,,Forest of No Return
+Cetus Maximus,spear,staff,lightning,dark,,Undertow Cove
+Chubby Cait,sword,dagger,axe,staff,,Derelict Mine
+Cliff Birdian I,sword,spear,axe,light,,South Bolderfall Pass
+Cliff Birdian II,sword,spear,axe,light,,South Bolderfall Pass
+Cliff Birdian III,spear,dagger,fire,dark,,South Bolderfall Pass
+Cliff Birdian IV,sword,spear,axe,lightning,,South Quarrycrest Path
+Cliff Birdian V,sword,spear,axe,lightning,,South Quarrycrest Path
+Cliff Birdian VI,spear,axe,dark,,,South Quarrycrest Path
+Cliff Birdking I,sword,spear,staff,lightning,,South Quarrycrest Path
+Cliff Birdking II,sword,spear,staff,lightning,,South Orewell Pass
+Cliff Birdking III,spear,dagger,axe,,,South Orewell Pass
+Collared Salamander,dagger,ice,light,,,East Saintsbridge Traverse
+Constituent I,spear,axe,bow,dark,,Obsidian Manse
+Constituent II,sword,ice,wind,light,,Obsidian Manse
+Crawly Fledgling,sword,axe,lightning,,,Carrion Caves
+Creeping Treant,axe,fire,,,,The Spectrewood
+Creepy Fledgling,sword,axe,lightning,,,South Orewell Pass
+Cultured Cait,sword,dagger,axe,staff,,Tomb of Kings
+Curator,spear,dagger,bow,staff,,Orlick's Manse
+Curator Mk.II,spear,dagger,bow,,,Ruins of Eld (upper floor)
+Dark Curator,spear,bow,staff,light,,Derelict Mine
+Dark Curator Mk.II,spear,bow,light,,,Lord's Manse
+Dark Elemental,fire,light,,,,Derelict Mine
+Dark Guardian,sword,dagger,bow,light,,Orlick's Manse
+Dark Guardian Mk.II,sword,dagger,bow,light,,Lord's Manse
+Dark Remnant,sword,spear,axe,light,,Yvon's Birthplace / Cellar
+Dark Revenant,sword,bow,staff,light,,Ruins of Eld (lower floor)
+Dark Roller,dagger,lightning,,,,Whistling Cavern
+Dark Sentinel,sword,spear,axe,staff,light,Orlick's Manse
+Dark Sentinel Mk.II,sword,spear,axe,staff,light,Seaside Grotto
+Davy Bones,axe,staff,wind,light,,Captains' Bane
+Deep One,sword,axe,light,,,Captains' Bane
+Demon Deer,spear,axe,lightning,dark,,The Spectrewood
+Demon Goat,sword,spear,light,,,West Everhold Pass
+Desert Worm,spear,axe,wind,light,,Western Wellspring Sands
+Devil Deer,axe,staff,lightning,wind,dark,Forest of Rubeh (southern section)
+Devourer of Dreams,sword,light,,,,Everhold Tunnels
+Dire Army Ant,sword,dagger,axe,,,Eastern Sunshade Sands
+Dire Ash Raven,spear,dagger,bow,wind,,Obsidian Manse
+Dire Night Raven,spear,dagger,bow,wind,,Carrion Caves
+Dire Skull Roller,dagger,lightning,,,,Marsalim Catacombs
+Dread Falcon,spear,dagger,bow,wind,dark,North Cobbleston Gap
+Dread Viper,spear,axe,dark,,,Untouched Sanctum
+Dreadwing,spear,bow,lightning,light,,Trail to the Forest of Rubeh
+Dreadwolf,spear,axe,wind,,,Maw of the Ice Dragon
+Eggling,sword,spear,axe,,,South Bolderfall Pass
+Ettin Asp,dagger,axe,fire,,,Quicksand Caves
+Ettin Ophidian,dagger,axe,wind,dark,,East Duskbarrow Trail
+Ettin Serpent,dagger,axe,fire,,,Forgotten Grotto
+Ettin Snake,dagger,axe,ice,,,Quicksand Caves
+Fire Elemental,ice,wind,,,,Derelict Mine
+Fire Guardian Mk.II,sword,dagger,bow,ice,,Lord's Manse
+Fire Sentinel,sword,spear,axe,staff,ice,Subterranean Study
+Fire Wisp,ice,dark,,,,Untouched Sanctum
+Flame Curator,spear,bow,staff,ice,,Derelict Mine
+Flame Curator Mk.II,spear,bow,ice,,,Lord's Manse
+Flame Guardian,sword,dagger,bow,ice,,Yvon's Birthplace / Cellar
+Flame Remnant Mk.II,sword,spear,axe,ice,,Shrine of the Warbringer
+Flame Revenant,sword,bow,staff,ice,,Shrine of the Warbringer
+Flame Sentinel Mk.II,sword,spear,axe,staff,ice,Seaside Grotto
+Flatlands Froggen I,bow,ice,light,,,East Atlasdam Flats
+Flatlands Froggen II,bow,ice,light,,,East Atlasdam Flats
+Flatlands Froggen III,axe,staff,ice,,,North Atlasdam Flats
+Flatlands Froggen IV,dagger,ice,light,,,The Whistlewood
+Flatlands Froggen V,dagger,ice,light,,,The Whistlewood
+Flatlands Froggen VI,axe,bow,ice,,,Western Noblecourt Flats
+Flatlands Frogking I,dagger,staff,ice,dark,,Western Noblecourt Flats
+Flatlands Frogking II,dagger,staff,ice,dark,,Western Wispermill Flats
+Flatlands Frogking III,dagger,bow,lightning,,,Western Wispermill Flats
+Flying Fish,sword,bow,lightning,dark,,North Rippletide Coast
+Forest Fox,sword,dagger,bow,staff,,The Whisperwood
+Forest Ratkin I,dagger,axe,lightning,light,,West S'warkii Trail
+Forest Ratkin II,dagger,axe,lightning,light,,West S'warkii Trail
+Forest Ratkin III,spear,axe,fire,,,West S'warkii Trail
+Forest Ratkin IV,sword,axe,wind,light,,East Victors Hollow Trail
+Forest Ratkin V,sword,axe,wind,light,,East Victors Hollow Trail
+Forest Ratkin VI,spear,axe,fire,,,East Victors Hollow Trail
+Forest Ratking I,dagger,staff,ice,wind,,East Victors Hollow Trail
+Forest Ratking II,dagger,staff,ice,wind,,East Duskbarrow Trail
+Forest Ratking III,sword,axe,lightning,,,East Duskbarrow Trail
+Frost Bear,spear,axe,wind,,,Western Flamesgrace Wilds
+Frost Fox,bow,fire,light,,,Western Flamesgrace Wilds
+Frostwing Serpent,spear,bow,fire,wind,,The Whitewood
+Furious Fungoid,dagger,staff,lightning,dark,,Western Wispermill Flats
+Gabbrodillo,sword,axe,light,,,The Whisperwood
+Gargantuan Boar,sword,bow,dark,,,East Victors Hollow Trail
+Giant Boar,sword,bow,dark,,,West S'warkii Trail
+Giant Eagle,spear,,,,,South Orewell Pass
+Giant Falcon,spear,dagger,bow,wind,dark,North Cobbleston Gap
+Giant Gator,spear,axe,lightning,,,Refuge Ruins
+Giant Scorpion,spear,ice,wind,,,Eastern Wellspring Sands
+Giant Sheep,bow,dark,,,,North Atlasdam Flats
+Giant Slug,dagger,ice,dark,,,South Clearbrook Traverse
+Gigantes,dagger,bow,ice,wind,,Refuge Ruins
+Gooey Slug,dagger,light,,,,Grandport Sewers (east)
+Great Condor,spear,bow,,,,South Bolderfall Pass
+Greater Kingfisher,spear,bow,wind,,,West Grandport Coast
+Green Scissors,dagger,axe,lightning,,,Path to the Forgotten Grotto
+Guard Dog,dagger,axe,fire,lightning,,Ravus Manor
+Guardian,sword,spear,dagger,bow,,Orlick's Manse
+Guardian Mk.II,sword,spear,dagger,bow,,Ruins of Eld (upper floor)
+Hatchling,sword,spear,axe,,,South Bolderfall Pass
+Heavenwing,spear,bow,dark,,,Carrion Caves
+Hermit Conch,sword,spear,ice,,,North Rippletide Coast
+High Wolf,axe,staff,fire,,,Western Flamesgrace Wilds
+Highland Goat,sword,spear,light,,,North Cobbleston Gap
+Highland Ratkin I,sword,dagger,bow,light,,North Cobbleston Gap
+Highland Ratkin II,sword,dagger,bow,light,,North Cobbleston Gap
+Highland Ratkin III,spear,bow,dark,,,North Cobbleston Gap
+Highland Ratkin IV,sword,bow,wind,light,,North Stonegard Pass
+Highland Ratkin V,sword,bow,wind,light,,North Stonegard Pass
+Highland Ratkin VI,spear,axe,dark,,,Spectrewood Path
+Highland Ratking I,spear,staff,lightning,light,,Spectrewood Path
+Highland Ratking II,spear,staff,lightning,light,,West Everhold Pass
+Highland Ratking III,sword,dagger,dark,,,West Everhold Pass
+Hoary Bear,spear,axe,wind,,,Western Stillsnow Wilds
+Hoary Howler,sword,spear,bow,wind,,Western Stillsnow Wilds
+Horned Fly,spear,bow,ice,wind,,North Riverford Traverse
+Horned Howler,spear,bow,lightning,,,East Victors Hollow Trail
+Horse Fly,spear,bow,ice,wind,,East Saintsbridge Traverse
+Howler,spear,bow,lightning,,,The Whistlewood
+Ice Curator,spear,bow,staff,fire,,Hoarfrost Grotto
+Ice Curator Mk.II,spear,bow,fire,,,Amphitheatre: Arena
+Ice Elemental,fire,lightning,,,,Hoarfrost Grotto
+Ice Guardian,sword,dagger,bow,fire,,Orlick's Manse
+Ice Guardian Mk.II,sword,dagger,bow,fire,,Amphitheatre: Balcony
+Ice Lizardking I,spear,dagger,fire,,,Western Stillsnow Wilds
+Ice Lizardking II,spear,dagger,fire,,,Southern Northreach Wilds
+Ice Lizardking III,bow,staff,dark,,,Southern Northreach Wilds
+Ice Lizardman I,axe,staff,fire,lightning,,Western Flamesgrace Wilds
+Ice Lizardman II,axe,staff,fire,lightning,,Western Flamesgrace Wilds
+Ice Lizardman III,staff,lightning,dark,,,Western Flamesgrace Wilds
+Ice Lizardman IV,dagger,axe,staff,fire,,Tomb of the Imperator
+Ice Lizardman V,dagger,axe,staff,fire,,Western Stillsnow Wilds
+Ice Lizardman VI,bow,staff,dark,,,Western Stillsnow Wilds
+Ice Remnant,sword,spear,axe,fire,,Hoarfrost Grotto
+Ice Remnant Mk.II,sword,spear,axe,fire,,Shrine of the Runeblade
+Ice Revenant,sword,bow,staff,fire,,Shrine of the Runeblade
+Ice Sentinel,sword,spear,axe,staff,fire,Subterranean Study
+Ice Sentinel Mk.II,sword,spear,axe,staff,fire,Amphitheatre: Arena
+Ice Wisp,fire,light,,,,Untouched Sanctum
+Icky Slug,dagger,light,,,,Obsidian Manse
+Kartikeya,spear,bow,,,,Eastern Marsalim Sands
+Killer Bug,sword,axe,dark,,,Sunshade Catacombs
+Killer Chameleon,axe,ice,,,,Forest of Rubeh (northern section)
+King Condor,spear,bow,,,,South Quarrycrest Path
+Kingfisher,spear,bow,wind,,,West Goldshore Coast
+Laughing Hyaena,axe,bow,fire,,,South Bolderfall Pass
+Light Curator,spear,bow,staff,dark,,Secret Path
+Light Curator Mk.II,spear,bow,dark,,,Amphitheatre: Arena
+Light Elemental,ice,dark,,,,Hoarfrost Grotto
+Light Guardian,sword,dagger,bow,dark,,Secret Path
+Light Guardian Mk.II,sword,dagger,bow,dark,,Amphitheatre: Balcony
+Light Remnant,sword,spear,axe,dark,,Tomb of Kings
+Light Remnant Mk.II,sword,spear,axe,dark,,Shrine of the Starseer
+Light Revenant,sword,bow,staff,dark,,Dragonsong Fane
+Light Sentinel,sword,spear,axe,staff,dark,Secret Path
+Light Sentinel Mk.II,sword,spear,axe,staff,dark,Obsidian Manse
+Light Wisp,ice,dark,,,,Sunshade Catacombs
+Lightning Elemental,fire,wind,,,,The Hollow Throne
+Lloris,dagger,fire,wind,,,Road to Morlock's Manse
+Long-eared Lloris,dagger,fire,wind,,,South Quarrycrest Path
+Lord of the Flies,spear,bow,ice,wind,,North Riverford Traverse
+Lord of the Sands,spear,bow,,,,Marsalim Catacombs
+Mad Ratkin,spear,lightning,light,,,Hidden Path
+Majestic Marmot,bow,staff,fire,,,West S'warkii Trail
+Majestic Snow Marmot,dagger,lightning,dark,,,Western Stillsnow Wilds
+Mammoth Sheep,bow,dark,,,,Western Noblecourt Flats
+Manticore,sword,bow,wind,,,The Whisperwood
+Manymaws,sword,axe,fire,,,Derelict Mine
+Marionette Bones,staff,wind,light,,,Untouched Sanctum
+Marmot,bow,staff,fire,,,West S'warkii Trail
+Master Thief I,sword,spear,lightning,light,,Moldering Ruins
+Master Thief II,sword,bow,ice,light,,Moldering Ruins
+Meep,bow,staff,dark,,,East Atlasdam Flats\nMISSABLE past Danger Lv. 7
+Menacing Manticore,sword,bow,staff,wind,,Forest of Rubeh (southern section)
+Monarch,spear,bow,dark,,,Twin Falls
+Morlock's Mercenary I,spear,dagger,ice,dark,,Morlock's Manse
+Morlock's Mercenary II,spear,dagger,ice,,,Morlock's Manse
+Mortal Mushroom,axe,lightning,light,,,Western Wispermill Flats
+Mossy Meep,sword,axe,staff,,,West S'warkii Trail
+Mossy Tortoise,sword,wind,,,,West Goldshore Coast
+Motley Slug,fire,ice,dark,,,Cave of Rhiyo
+Mountain Goat,sword,spear,light,,,Spectrewood Path
+Mutant Mushroom,dagger,fire,,,,The Spectrewood
+Night Raven,spear,dagger,bow,wind,,Carrion Caves
+Obsidian Executive I,spear,axe,bow,dark,,Grandport Sewers (east)
+Obsidian Executive II,sword,ice,wind,light,,Grandport Sewers (east)
+Peek-a-boo,axe,lightning,,,,East Duskbarrow Trail
+Pirate I,bow,fire,,,,Caves of Maiya
+Pirate II,bow,fire,,,,Caves of Maiya
+Pirate III,sword,bow,,,,Caves of Maiya
+Plains Drake,spear,bow,,,,Western Wispermill Flats
+Portly Penguin,axe,bow,lightning,light,dark,Western Stillsnow Wilds
+Puppet Bones,staff,fire,light,,,Untouched Sanctum
+Raging Rhino,sword,axe,lightning,dark,,Western Wispermill Flats
+Raging Treant,axe,fire,,,,East Duskbarrow Trail
+Rampant Weed,sword,axe,fire,,,The Spectrewood
+Ravus Guard I,sword,dagger,axe,,,Ravus Manor
+Ravus Guard II,fire,ice,,,,Ravus Manor
+Ravus Soldier III,dagger,bow,lightning,,,Ravus Manor
+Reaper Crab,dagger,axe,lightning,,,Undertow Cove
+Red Fox,dagger,bow,staff,,,The Whisperwood
+Red Viper,sword,spear,axe,dark,,Cave of Rhiyo
+Remnant,sword,spear,dagger,axe,,The Hollow Throne
+Remnant Mk.II,sword,spear,dagger,axe,,Eastern Marsalim Sands
+Reptalion,axe,,,,,East Saintsbridge Traverse
+Reptalios,axe,,,,,Southern Northreach Wilds
+Researcher I,sword,dagger,bow,wind,,Yvon's Birthplace / Cellar
+Researcher II,sword,dagger,bow,wind,,Yvon's Birthplace / Cellar
+Researcher III,dagger,bow,lightning,,,Yvon's Birthplace / Cellar
+Revenant,sword,dagger,bow,staff,,Grimsand Road
+River Bug,sword,axe,staff,dark,,East Saintsbridge Traverse
+River Fly,spear,bow,ice,wind,,Whistling Cavern
+River Froggen I,sword,axe,ice,dark,,South Clearbrook Traverse
+River Froggen II,sword,bow,ice,dark,,South Clearbrook Traverse
+River Froggen III,sword,bow,ice,,,South Clearbrook Traverse
+River Froggen IV,staff,ice,dark,,,Twin Falls
+River Froggen V,staff,ice,dark,,,Twin Falls
+River Froggen VI,sword,axe,ice,,,East Saintsbridge Traverse
+River Frogking I,sword,staff,wind,dark,,East Saintsbridge Traverse
+River Frogking II,sword,staff,wind,dark,,North Riverford Traverse
+River Frogking III,dagger,bow,ice,,,North Riverford Traverse
+River Wasp,sword,spear,axe,,,South Clearbrook Traverse
+Rock Tortoise,sword,wind,,,,Path to the Caves of Maiya
+Rockadillo,sword,axe,dark,,,North Cobbleston Gap
+Sailfish,sword,bow,fire,lightning,,Path to the Caves of Maiya
+Salamander,dagger,ice,light,,,South Clearbrook Traverse
+Sand Lizardking I (type 1),spear,staff,ice,,,Lizardmen's Den
+Sand Lizardking I (type 2),sword,bow,ice,dark,,Northern Wellspring Sands
+Sand Lizardking II (type 1),spear,staff,ice,,,Lizardmen's Den
+Sand Lizardking II (type 2),sword,bow,ice,dark,,Eastern Marsalim Sands
+Sand Lizardking III,dagger,staff,lightning,,,Eastern Marsalim Sands
+Sand Lizardman I (type 1),sword,dagger,ice,dark,,Eastern Sunshade Sands
+Sand Lizardman I (type 2),spear,ice,wind,,,Western Wellspring Sands
+Sand Lizardman II (type 1),sword,dagger,ice,dark,,Eastern Sunshade Sands
+Sand Lizardman II (type 2),spear,ice,wind,,,Western Wellspring Sands
+Sand Lizardman III (type 1),spear,dagger,lightning,dark,,Eastern Sunshade Sands
+Sand Lizardman III (type 2),spear,ice,wind,,,Western Wellspring Sands
+Sand Lizardman IV,dagger,axe,ice,wind,,Eastern Wellspring Sands
+Sand Lizardman V,dagger,axe,ice,wind,,Eastern Wellspring Sands
+Sand Lizardman VI,spear,dagger,lightning,,,Northern Wellspring Sands
+Sandworm,spear,axe,wind,light,,Southern Sunshade Sands
+Savage Scorpion,spear,ice,wind,,,Southern Wellspring Sands
+Scaled Viper,spear,axe,dark,,,Brigands' Den
+Scissor Crab,dagger,axe,wind,,,Road to the Caves of Azure
+Scythe Crab,dagger,axe,wind,,,West Goldshore Coast
+Sea Anemone,axe,lightning,dark,,,Grandport Sewers (west)
+Sea Birdian I,sword,spear,fire,lightning,,North Rippletide Coast
+Sea Birdian II,sword,spear,fire,lightning,,North Rippletide Coast
+Sea Birdian III,sword,fire,wind,,,Path to the Caves of Maiya
+Sea Birdian IV,spear,staff,fire,lightning,,Moonstruck Coast\nMISSABLE past Danger Lv. 31
+Sea Birdian V,spear,staff,fire,lightning,,Moonstruck Coast
+Sea Birdian VI,sword,fire,wind,,,Road to the Caves of Azure
+Sea Birdking I,spear,axe,bow,lightning,,Road to the Caves of Azure
+Sea Birdking II,spear,axe,bow,lightning,,West Grandport Coast
+Sea Birdking III,spear,fire,lightning,,,West Grandport Coast
+Sea Scorpion,spear,ice,wind,,,Forgotten Grotto
+Sea Slug,fire,wind,dark,,,Caves of Azure
+Sea Snake,spear,fire,,,,Caves of Maiya
+Sentinel,sword,spear,axe,bow,staff,Ravus Manor
+Sentinel Mk.II,sword,spear,axe,bow,staff,Ruins of Eld (upper floor)
+Shadow Bat,sword,spear,bow,ice,,Sunshade Catacombs
+Shadow Raven,spear,dagger,bow,wind,,West Everhold Pass
+Shadow Remnant Mk.II,sword,spear,axe,light,,Shrine of the Starseer
+Shadow Revenant,sword,bow,staff,light,,Dragonsong Fane
+Shadow Wisp,fire,light,,,,Cave of Origin
+Shaggy Aurochs,spear,axe,fire,,,North Stonegard Pass
+Shaggy Meep,bow,staff,dark,,,North Atlasdam Flats
+Shaggy Spider,dagger,axe,staff,lightning,light,Seaside Grotto
+Shambling Weed,sword,axe,fire,,,The Spectrewood
+Skulking Fungoid,spear,ice,,,,The Spectrewood
+Skull Roller,spear,ice,dark,,,Eastern Sunshade Sands
+Slayer Bug,sword,axe,,,,Lizardmen's Den
+Snow Drake,spear,bow,,,,Southern Northreach Wilds
+Snow Fox,bow,fire,light,,,Western Flamesgrace Wilds
+Snow Leopard,bow,fire,dark,,,Trail to the Whitewood
+Snow Lizard,bow,lightning,dark,,,The Whitewood
+Snow Marmot,bow,staff,lightning,dark,,Western Flamesgrace Wilds
+Snow Yak,spear,staff,lightning,,,Western Stillsnow Wilds
+Spiked Skink,spear,staff,dark,,,Southern Wellspring Sands
+Spud Bug,sword,dagger,fire,light,,The Whistlewood
+Sticky Slug,dagger,light,,,,The Sewers
+Stone Bug,sword,axe,ice,lightning,,Grimsand Ruins (lower floor)
+Stone Lizard,sword,staff,ice,lightning,dark,Grimsand Ruins (lower floor)
+Stone Serpent,dagger,axe,ice,dark,,Grimsand Ruins (lower floor)
+Tempest Falcon,spear,dagger,bow,wind,,Carrion Caves
+Thief I,sword,spear,lightning,light,,Tomb of Kings
+Thief II,sword,bow,ice,light,,Tomb of Kings
+Throne Guardian,sword,dagger,staff,ice,wind,The Hollow Throne
+Thunder Curator,spear,bow,staff,wind,,Obsidian Manse
+Thunder Curator Mk.II,spear,bow,wind,,,Grandport Sewers (west)
+Thunder Guardian,sword,dagger,bow,wind,,Yvon's Birthplace / Cellar
+Thunder Guardian Mk.II,sword,dagger,bow,wind,,Grandport Sewers (west)
+Thunder Remnant,sword,spear,axe,wind,,The Hollow Throne
+Thunder Remnant Mk.II,sword,spear,axe,wind,,Shrine of the Warbringer
+Thunder Revenant,sword,bow,staff,wind,,Shrine of the Archmagus
+Thunder Sentinel,sword,spear,axe,staff,wind,Morlock's Manse
+Thunder Sentinel Mk. II,sword,spear,axe,staff,wind,Grandport Sewers (west)
+Thunder Wisp,wind,dark,,,,Untouched Sanctum
+Two-handed Hatchling,sword,spear,axe,,,South Quarrycrest Path
+Tyrannodrake,axe,staff,ice,wind,,Loch of the Lost King
+Vampire Bat,sword,spear,bow,ice,,Lizardmen's Den
+Venomous Scorpion,spear,ice,wind,,,Eastern Marsalim Sands
+Wanderweed,sword,fire,,,,The Murkwood
+War Dog,axe,bow,fire,lightning,,Morlock's Manse
+War Wolf,sword,bow,wind,,,Southern Northreach Wilds
+Warrior Bones,axe,staff,fire,light,,Farshore
+Warrior Wasp,sword,spear,axe,,,South Clearbrook Traverse
+Werner's Man I,sword,dagger,fire,,,Lord's Manse
+Werner's Man II,sword,dagger,fire,,,Lord's Manse
+Werner's Man III,sword,dagger,fire,,,Lord's Manse
+White Bat,spear,bow,staff,dark,,Cave of Origin
+White Howler,sword,spear,bow,wind,,Road to the Obsidian Parlor
+Wild Weasel,axe,ice,lightning,,,North Stonegard Pass
+Wind Curator,spear,bow,staff,lightning,,Secret Path
+Wind Curator Mk.II,spear,bow,lightning,,,Ruins of Eld (upper floor)
+Wind Elemental,ice,lightning,,,,Captains' Bane
+Wind Guardian,sword,dagger,bow,lightning,,Secret Path
+Wind Guardian Mk.II,sword,dagger,bow,lightning,,Ruins of Eld (upper floor)
+Wind Remnant,sword,spear,axe,lightning,,Tomb of Kings
+Wind Remnant Mk.II,sword,spear,axe,lightning,,Shrine of the Starseer
+Wind Revenant,sword,bow,staff,lightning,,Shrine of the Starseer
+Wind Sentinel,sword,spear,axe,staff,lightning,Secret Path
+Wind Sentinel Mk.II,sword,spear,axe,staff,lightning,Ruins of Eld (upper floor)
+Wind Wisp,lightning,light,,,,Untouched Sanctum
+Winged Serpent,spear,bow,fire,wind,,West Everhold Pass
+Winter Wanderweed,sword,wind,,,,The Whitewood
+Withered Wanderweed,sword,axe,fire,,,Eastern Wellspring Sands
+Wolf,axe,staff,fire,lightning,,Cave of Origin
+Woolly Spider,sword,axe,staff,lightning,,South Orewell Pass
+Zealot I,sword,dagger,axe,light,,Ebony Grotto (west)
+Zealot II,sword,dagger,axe,light,,Ebony Grotto (west)

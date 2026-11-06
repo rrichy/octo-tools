@@ -1,0 +1,339 @@
+
+Str,Name,Summons,Skill Name,Type,Targets,Hits,Effects,
+9,Accursed Armor,3-5,Armor Break (All),,All Enemies,1,Occasionally decreases target's Phys. Def. for 2 turns
+1,Aggressive Ant,5-7,Lunge,,Single Enemy,1,
+4,Albino Bat,5-7,Soporific Fang,,Single Enemy,1,Occasionally puts target to sleep for 2 turns
+4,Ambling Bones,3-5,Mighty Slash,,All Enemies,1,
+9,Animated Armor,3-5,Invincible Cleave,,Single Enemy,1,Grants a single, random ally 2 turns of Invincibility
+4,Antagonistic Ant,5-7,Lunge,,Single Enemy,1,
+7,Armor Eater,3-5,Retaliative Posture,,Single Ally,,Augment a single, random ally's physical defense for 2 turns.  Grants same ally 1 (+1/BP)charge of Counter Physical Damage
+1,Army Ant,5-7,Stab,,Single Enemy,1,
+4,Ash Raven,5-7,Enshadow,,Single Enemy,1,
+2,Assassin Bug,5-7,Lunge,,Single Enemy,1,
+4,Avalanche Mushroom,3-5,Restore Great Health,,Single Ally,,Restore 1000(+1000/BP) HP to a single ally.
+4,Azure Urchin,3-5,Physical Boost,,Single Ally,,Augment a single, random ally's physical attack and physical defense for 2(+1/BP) turns.
+7,Bandit Bones,3-5,Mighty Slash,,All Enemies,1,
+4,Barnacle Bat,5-7,Slumber Wave (All),,All Enemies,,Occasionally puts all targets to sleep for 4 turns.
+5,Barnacle Crab,5-7,Toxic Mist (All),,All Enemies,,Occasionally poisons all targets for 4 turns.
+6,Barnacle Tortoise,3-5,Befuddling Spark (All),,All Enemies,1,Occasionally inflicts confusion for 2 turns
+10,Behemoth,1-3,Incredible Heal (All),,All Allies,,Restore 2000(+2000/BP) HP to all allies.  Grants all allies 2 turns of HP Regeneration
+2,Black Bat,5-7,Stab,,Single Enemy,1,
+6,Black Howler,5-7,Soporific Wind,,Single Enemy,1,Occasionally puts target to sleep for 2 turns
+8,Black Scissors,5-7,Toxic Ice,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Blood Remnant,3-5,Incinerate,,Single Enemy,1,
+7,Blood Revenant,1-3,Guardian Axe,,Single Enemy,1,Augment a single, random ally's elemental defense for 2 turns.
+4,Blood Viper,5-7,Incinerate,,Single Enemy,1,
+7,Bloody Bull,3-5,Repeated Thrust,,Single Enemy,2,
+8,Bloody Rhino,3-5,Lunge,,Single Enemy,1,
+8,Blue Bull,3-5,Repeated Thrust,,Single Enemy,2,
+5,Brawler Bones,3-5,Mighty Slash,,All Enemies,1,
+8,Brigand Bones,3-5,Slash,,Single Enemy,1,
+4,Buccaneer Bones,3-5,Befuddling Claw,,Single Enemy,1,Occasionally inflicts confusion for 2 turns
+2,Cactus Roller,5-7,Lunge,,Single Enemy,1,
+5,Cait,3,Luck of the Cait,,,,
+4,Carmine Eagle,3-5,Wind Slash,,Single Enemy,1,
+6,Carnivorous Bat,5-7,Soporific Fang (All),,All Enemies,1,Occasionally puts all targets to sleep for 2 turns
+10,Carnivorous Plant,1-3,Continual Light (All),,All Allies,,Restore 25(+25/BP) SP to all allies.  Grants all allies 2 turns of SP Regeneration
+6,Cetus Maximus,3-5,Soporific Mist (All),,All Enemies,,Occasionally puts all targets to sleep for 6 turns.
+10,Chubby Cait,3,Supreme Luck of the Cait,,,,
+1,Cliff Birdian I,5-7,Attack,,Single Enemy,1,
+2,Cliff Birdian II,5-7,Attack All,,All Enemies,1,
+3,Cliff Birdian III,5-7,Double Strike,,Single Enemy,2,
+4,Cliff Birdian IV,5-7,Double Strike,,Single Enemy,2,
+4,Cliff Birdian V,5-7,Double Attack All,,All Enemies,2,
+5,Cliff Birdian VI,5-7,Triple Attack,,Single Enemy,3,
+5,Cliff Birdking I,3-5,Triple Attack,,Single Enemy,3,
+6,Cliff Birdking II,3-5,Triple Attack All,,All Enemies,3,
+7,Cliff Birdking III,3-5,Double Elemental Arrow Dance,,Single Enemy,2,Augment a single, random ally's elemental attack for 2 turns.
+6,Collared Salamander,3-5,Blinding Charge,,Single Enemy,2,Occasionally blinds target for 2 turns
+3,Crawly Fledgling,5-7,Poison Shot,,Single Enemy,1,Occasionally poisons target for 2 turns
+6,Creeping Treant,3-5,Blinding Shot (All),,All Enemies,1,Occasionally blinds all targets for 2 turns
+6,Creepy Fledgling,5-7,Poison Shot,,Single Enemy,1,Occasionally poisons target for 2 turns
+7,Cultured Cait,3,Deluxe Luck of the Cait,,,,
+4,Curator,3-5,Mental Boost,,Single Ally,,Augment a single, random ally's elemental attack and elemental defense for 2(+1/BP) turns.
+9,Curator Mk.II,3-5,Mental Boost (All),,All Allies,,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+6,Dark Curator,3-5,Enshadow,,Single Enemy,1,
+7,Dark Curator Mk.II,3-5,Enshadow,,Single Enemy,1,
+6,Dark Elemental,3-5,Enshadow (All),,All Enemies,1,
+7,Dark Guardian,3-5,Shadow Stream,,Single Enemy,2,
+8,Dark Guardian Mk.II,3-5,Enshadow (All),,All Enemies,1,
+4,Dark Remnant,3-5,Enshadow,,Single Enemy,1,
+7,Dark Revenant,1-3,Bulwark Axe,,Single Enemy,1,Augment a single, random ally's physical defense for 2 turns.
+4,Dark Roller,5-7,Poison Strike,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Dark Sentinel,5-7,Enshadow,,Single Enemy,1,
+5,Dark Sentinel Mk.II,5-7,Enshadow,,Single Enemy,1,
+5,Davy Bones,3-5,Befuddling Claw,,Single Enemy,1,Occasionally inflicts confusion for 2 turns
+10,Deep One,1-3,Ice Floe (All),,All Enemies,1,Occasionally reduces all targets' speed for 2 turns
+5,Demon Deer,3-5,Mighty Lunge,,All Enemies,1,
+7,Demon Goat,3-5,Soporific Strike (All),,All Enemies,1,Occasionally puts all targets to sleep for 2 turns
+6,Desert Worm,3-5,Sand Strike (All),,All Enemies,1,Occasionally blinds all targets for 2 turns
+6,Devil Deer,3-5,Mighty Lunge,,All Enemies,1,
+10,Devourer of Dreams,1-3,Vorpal Claw (All),,,,Occasionally kills all targets instantly (100% chance at MAX boost), excluding NPCs and bosses
+4,Dire Army Ant,3-5,Acid Blue,,Single Enemy,,Occasionally decreases target's Elem. Atk. and/or Phys. Atk. for 2 turns
+5,Dire Ash Raven,5-7,Enshadow,,Single Enemy,1,
+4,Dire Night Raven,5-7,Slash,,Single Enemy,1,
+5,Dire Skull Roller,5-7,Poison Strike,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Dread Falcon,5-7,Wind Slash,,Single Enemy,1,
+4,Dread Viper,5-7,Venomous Fang,,Single Enemy,1,Occasionally poisons target for 2 turns
+9,Dreadwing,3-5,Icy Breath (All),,All Enemies,1,Occasionally decreases all targets' Elem. Def. for 2 turns
+10,Dreadwolf,1-3,Wild Scratch (All),,All Enemies,,Attack all targets additional times per BP spent
+2,Eggling,5-7,Lunge,,Single Enemy,1,
+6,Ettin Asp,3-5,Double Stab,,Single Enemy,2,
+8,Ettin Ophidian,3-5,Double Stab,,Single Enemy,2,
+6,Ettin Serpent,3-5,Befuddling Fang (All),,All Enemies,1,Occasionally inflicts confusion on all targets for 2 turns
+9,Ettin Snake,3-5,Mighty Double Stab,,All Enemies,2,
+6,Fire Elemental,3-5,Incinerate (All),,All Enemies,1,
+8,Fire Guardian Mk.II,3-5,Incinerate (All),,All Enemies,1,
+4,Fire Sentinel,5-7,Incinerate,,Single Enemy,1,
+3,Fire Wisp,5-7,Incinerate,,Single Enemy,1,
+6,Flame Curator,3-5,Incinerate,,Single Enemy,1,
+7,Flame Curator Mk.II,3-5,Incinerate,,Single Enemy,1,
+6,Flame Guardian,3-5,Incinerate (All),,All Enemies,1,
+6,Flame Remnant Mk.II,3-5,Incinerate,,Single Enemy,1,
+10,Flame Revenant,1-3,Inferno Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+5,Flame Sentinel Mk.II,5-7,Incinerate,,Single Enemy,1,
+1,Flatlands Froggen I,5-7,Attack,,Single Enemy,1,
+2,Flatlands Froggen II,5-7,Attack All,,All Enemies,1,
+3,Flatlands Froggen III,5-7,Double Strike,,Single Enemy,2,
+4,Flatlands Froggen IV,5-7,Double Strike,,Single Enemy,2,
+4,Flatlands Froggen V,5-7,Double Strike All,,All Enemies,2,
+5,Flatlands Froggen VI,5-7,Triple Attack,,Single Enemy,3,
+5,Flatlands Frogking I,3-5,Triple Attack,,Single Enemy,3,
+6,Flatlands Frogking II,3-5,Triple Attack All,,All Enemies,3,
+7,Flatlands Frogking III,3-5,Double Guard Break,,Single Enemy,2,Occasionally decreases target's Elem. Def. for 2 turns
+2,Flying Fish,5-7,Lunge,,Single Enemy,1,
+2,Forest Fox,5-7,Blinding Claw,,Single Enemy,1,Occasionally blinds target for 2 turns
+1,Forest Ratkin I,5-7,Attack,,Single Enemy,1,
+2,Forest Ratkin II,5-7,Attack All,,All Enemies,1,
+3,Forest Ratkin III,5-7,Double Strike,,Single Enemy,2,
+4,Forest Ratkin IV,5-7,Double Strike,,Single Enemy,2,
+4,Forest Ratkin V,5-7,Double Attack All,,All Enemies,2,
+5,Forest Ratkin VI,5-7,Triple Attack,,Single Enemy,3,
+5,Forest Ratking I,3-5,Triple Attack,,Single Enemy,3,
+6,Forest Ratking II,3-5,Triple Attack All,,All Enemies,3,
+7,Forest Ratking III,3-5,Double Blessed Spear,,Single Enemy,2,Augment a single, random ally's elemental defense for 2 turns.
+5,Frost Bear,3-5,Enraged Bash (All),,All Enemies,2,
+4,Frost Fox,5-7,Freeze,,Single Enemy,1,
+4,Frostwing Serpent,3-5,Wind Slash,,Single Enemy,1,
+8,Furious Fungoid,3-5,Continual Light (HP),,Single Ally,,Restore 1000(+1000/BP) HP to a single ally.  Grants same ally 2 turns of HP Regeneration
+2,Gabbrodillo,5-7,Lunge,,Single Enemy,1,
+6,Gargantuan Boar,3-5,Mighty Charge (All),,All Enemies,1,
+5,Giant Boar,3-5,Mighty Charge (All),,All Enemies,1,
+6,Giant Eagle,3-5,Wind Slash,,Single Enemy,1,
+2,Giant Falcon,5-7,Wind Slash,,Single Enemy,1,
+9,Giant Gator,3-5,Wreak Havoc (All),,All Enemies,1,Augment all allies' physical attack for 2 turns.
+4,Giant Scorpion,5-7,Venomous Claw (All),,All Enemies,1,Occasionally poisons all targets for 2 turns
+5,Giant Sheep,3-5,Grooming (All),,All Allies,,Restore 500(+500/BP) HP to all allies.
+1,Giant Slug,5-7,Lunge,,Single Enemy,1,
+10,Gigantes,1-3,Fell Swoop (All),,All Enemies,1,Augment all allies' physical attack and elemental attack for 2 turns.
+8,Gooey Slug,3-5,Viscous Bite,,Single Enemy,,Occasionally decreases target's Elem. Atk., Elem. Def., and/or Speed for 6 turns
+5,Great Condor,3-5,Thousand Scythes,,Single Enemy,1,
+8,Greater Kingfisher,3-5,Ice Floe,,Single Enemy,2,
+4,Green Scissors,5-7,Toxic Mist (All),,All Enemies,,Occasionally poisons all targets for 4 turns.
+3,Guard Dog,5-7,Slash,,Single Enemy,1,
+4,Guardian,3-5,Chop,,Single Enemy,1,
+8,Guardian Mk.II,3-5,Mighty Chop,,All Enemies,1,
+4,Hatchling,5-7,Lunge,,Single Enemy,1,
+10,Heavenwing,1-3,Crimson Flame (All),,All Enemies,1,Occasionally decreases all targets' Phys. Atk. and/or Phys. Def. for 2 turns
+2,Hermit Conch,5-7,Lunge,,Single Enemy,1,
+4,High Wolf,5-7,Soporific Claw,,Single Enemy,1,Occasionally puts target to sleep for 2 turns
+5,Highland Goat,3-5,Mighty Charge (All),,All Enemies,1,
+1,Highland Ratkin I,5-7,Attack,,Single Enemy,1,
+2,Highland Ratkin II,5-7,Attack All,,All Enemies,1,
+3,Highland Ratkin III,5-7,Double Strike,,Single Enemy,2,
+4,Highland Ratkin IV,5-7,Double Strike,,Single Enemy,2,
+4,Highland Ratkin V,5-7,Double Attack All,,All Enemies,2,
+5,Highland Ratkin VI,5-7,Triple Attack,,Single Enemy,3,
+5,Highland Ratking I,3-5,Triple Attack,,Single Enemy,3,
+6,Highland Ratking II,3-5,Triple Attack All,,All Enemies,3,
+8,Highland Ratking III,3-5,Retaliative Axe,,Single Enemy,1,Grants a single, random ally 2 (+1/BP)charge of Counter Physical Damage
+6,Hoary Bear,3-5,Enraged Bash (All),,All Enemies,2,
+6,Hoary Howler,5-7,Mighty Stab,,All Enemies,1,
+6,Horned Fly,5-7,Befuddling Claw,,Single Enemy,1,Occasionally inflicts confusion for 2 turns
+4,Horned Howler,5-7,Wind Slash,,Single Enemy,1,
+5,Horse Fly,5-7,Befuddling Claw,,Single Enemy,1,Occasionally inflicts confusion for 2 turns
+4,Howler,5-7,Wind Slash,,Single Enemy,1,
+4,Ice Curator,3-5,Freeze,,Single Enemy,1,
+7,Ice Curator Mk.II,3-5,Freeze,,Single Enemy,1,
+6,Ice Elemental,3-5,Freeze (All),,All Enemies,1,
+4,Ice Guardian,3-5,Freeze (All),,All Enemies,1,
+8,Ice Guardian Mk.II,3-5,Freeze (All),,All Enemies,1,
+5,Ice Lizardking I,3-5,Triple Attack,,Single Enemy,3,
+6,Ice Lizardking II,3-5,Triple Attack All,,All Enemies,3,
+7,Ice Lizardking III,3-5,Swordwall Dance,,Single Enemy,2,Augment a single, random ally's physical defense for 2 turns.
+1,Ice Lizardman I,5-7,Attack,,Single Enemy,1,
+2,Ice Lizardman II,5-7,Attack All,,All Enemies,1,
+3,Ice Lizardman III,5-7,Double Strike,,Single Enemy,2,
+4,Ice Lizardman IV,5-7,Double Strike,,Single Enemy,2,
+4,Ice Lizardman V,5-7,Double Attack All,,All Enemies,2,
+5,Ice Lizardman VI,5-7,Triple Attack,,Single Enemy,3,
+7,Ice Remnant,3-5,Freeze,,Single Enemy,1,
+6,Ice Remnant Mk.II,3-5,Freeze,,Single Enemy,1,
+10,Ice Revenant,1-3,Diamond Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+4,Ice Sentinel,5-7,Freeze,,Single Enemy,1,
+6,Ice Sentinel Mk.II,5-7,Freeze,,Single Enemy,1,
+3,Ice Wisp,5-7,Freeze,,Single Enemy,1,
+6,Icky Slug,3-5,Black Bile,,Single Enemy,,Occasionally decreases target's Phys. Atk. and/or Phys. Def. for 4 turns
+6,Kartikeya,3-5,Rainbow Flash (All),,All Enemies,,Occasionally blinds all targets for 6 turns.
+4,Killer Bug,5-7,Lunge,,Single Enemy,1,
+8,Killer Chameleon,3-5,Sharp Scratch (All),,All Enemies,1,Occasionally decreases all targets' Critical for 2 turns.
+6,King Condor,3-5,Thousand Scythes,,Single Enemy,1,
+7,Kingfisher,3-5,Ice Floe,,Single Enemy,2,
+4,Laughing Hyaena,5-7,Venomous Fang,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Light Curator,3-5,Luminescense,,Single Enemy,1,
+7,Light Curator Mk.II,3-5,Luminescence,,Single Enemy,1,
+7,Light Elemental,3-5,Luminescence (All),,All Enemies,1,
+7,Light Guardian,3-5,Light Stream,,Single Enemy,2,
+8,Light Guardian Mk.II,3-5,Luminescence (All),,All Enemies,1,
+7,Light Remnant,3-5,Luminescense,,Single Enemy,1,
+6,Light Remnant Mk.II,3-5,Luminescence,,Single Enemy,1,
+10,Light Revenant,1-3,Solar Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+4,Light Sentinel,5-7,Luminescense,,Single Enemy,1,
+5,Light Sentinel Mk.II,5-7,Luminescence,,Single Enemy,1,
+3,Light Wisp,5-7,Luminescence,,Single Enemy,1,
+6,Lightning Elemental,3-5,Electrocute (All),,All Enemies,1,
+4,Lloris,5-7,Mighty Slash,,All Enemies,1,
+6,Long-eared Lloris,5-7,Mighty Slash,,All Enemies,1,
+7,Lord of the Flies,3-5,Offensive Claw,,Single Enemy,1,Occasionally decreases target's Phys. Atk. for 2 turns
+10,Lord of the Sands,1-3,Sandstorm Strike (All),,All Enemies,1,Occasionally decreases all targets' Phys. Def. and/or Elem. Def. for 2 turns
+6,Mad Ratkin,5-7,Attack,,Single Enemy,1,
+4,Majestic Marmot,5-7,Slash,,Single Enemy,1,
+4,Majestic Snow Marmot,5-7,Mighty Slash,,All Enemies,1,
+6,Mammoth Sheep,3-5,Great Healing Mist,,All Allies,,Restore 1000(+1000/BP) HP to all allies.
+3,Manticore,3-5,Mighty Stab,,All Enemies,1,
+10,Manymaws,1-3,Horrible Breath (All),,All Enemies,,Occasionally poisons all targets and/or puts all targets to sleep for 9 turns.  Occasionally decreases all targets' phy defense, elemental defense, and/or speed for 9 turns.
+4,Marionette Bones,3-5,Slash,,Single Enemy,1,
+2,Marmot,5-7,Slash,,Single Enemy,1,
+2,Meep,5-7,Lunge,,Single Enemy,1,
+7,Menacing Manticore,3-5,Blinding Claw,,Single Enemy,1,Occasionally blinds target for 2 turns
+10,Monarch,1-3,Butterfly Effect (All),,All Enemies,1,Occasionally puts all targets to sleep for 2 turns
+7,Mortal Mushroom,3-5,Crimson Powder (All),,All Enemies,,Occasionally puts all targets to sleep and/or poisons all targets for 6 turns.
+2,Mossy Meep,5-7,Restore Health,,Single Ally,,Restore 500(+500/BP) HP to a single ally.
+6,Mossy Tortoise,3-5,Warding Thunder,,Single Enemy,1,Augment a single, random ally's physical defense for 2 turns.
+3,Motley Slug,5-7,Restore Health,,Single Ally,,Restore 500(+500/BP) HP to a single ally.
+6,Mountain Goat,3-5,Mighty Charge (All),,All Enemies,1,
+7,Mutant Mushroom,3-5,Millennial Frond,,Single Ally,,Restore 1000(+1000/BP) HP to a single ally.  Augments same ally's physical attack and elemental attack for 2 turns.
+4,Night Raven,5-7,Slash,,Single Enemy,1,
+9,Peek-a-Boo,3-5,Endanger Life (All),,All Enemies,1,Occasionally reduces target's speed for 2 turns
+9,Plains Drake,5,Crushing Wing (All),,All Enemies,1,Occasionally decreases all targets' Phys. Def. for 2 turns
+7,Portly Penguin,3-5,Double Body Press,,Single Enemy,2,Occasionally inflicts confusion for 2 turns
+6,Puppet Bones,3-5,Mighty Slash,,All Enemies,1,
+6,Raging Rhino,3-5,Lunge,,Single Enemy,1,
+7,Raging Treant,3-5,Blinding Shot,,Single Enemy,1,Occasionally blinds target for 2 turns
+6,Rampant Weed,5-7,Great Healing Mist,,All Allies,,Restore 1000(+1000/BP) HP to all allies.
+9,Reaper Crab,3-5,Freeze (All),,All Enemies,1,
+4,Red Fox,5-7,Blinding Claw,,Single Enemy,1,Occasionally blinds target for 2 turns
+2,Red Viper,5-7,Incinerate,,Single Enemy,1,
+7,Remnant,3-5,Bite,,Single Enemy,1,
+6,Remnant Mk.II,3-5,Bite,,Single Enemy,1,
+7,Reptalion,3-5,Great Sweep (All),,All Enemies,1,Occasionally decreases target's Critical for 2 turns.
+8,Reptalios,3-5,Enfettering Slash (All),,All Enemies,1,Occasionally reduces all targets' speed for 2 turns
+10,Revenant,1-3,Impact Clock,,Single Ally,,Augment a single, random ally's speed, physical attack, physical defense, elemental attack, and elemental defense for 2(+1/BP) turns.
+6,River Bug,5-7,Mighty Slash,,All Enemies,1,
+4,River Fly,5-7,Befuddling Claw,,Single Enemy,1,Occasionally inflicts confusion for 2 turns
+1,River Froggen I,5-7,Attack,,Single Enemy,1,
+2,River Froggen II,5-7,Attack All,,All Enemies,1,
+3,River Froggen III,5-7,Double Strike,,Single Enemy,2,
+4,River Froggen IV,5-7,Double Strike,,Single Enemy,2,
+4,River Froggen V,5-7,Double Attack All,,All Enemies,2,
+5,River Froggen VI,5-7,Triple Attack,,Single Enemy,3,
+5,River Frogking I,3-5,Triple Attack,,Single Enemy,3,
+6,River Frogking II,3-5,Triple Attack (All),,All Enemies,3,
+7,River Frogking III,3-5,Double Armor Crush,,Single Enemy,2,Occasionally decreases target's Phys. Def. for 2 turns
+1,River Wasp,5-7,Poison Shot,,Single Enemy,1,Occasionally poisons target for 2 turns
+5,Rock Tortoise,3-5,Warding Thunder,,Single Enemy,1,Augment a single, random ally's physical defense for 2 turns.
+2,Rockadillo,5-7,Lunge,,Single Enemy,1,
+4,Sailfish,5-7,Lunge,,Single Enemy,1,
+5,Salamander,3-5,Blinding Charge,,Single Enemy,2,Occasionally blinds target for 2 turns
+5,Sand Lizardking I,3-5,Triple Attack (All),,All Enemies,3,
+6,Sand Lizardking II,3-5,Triple Attack (All),,All Enemies,3,
+7,Sand Lizardking III,3-5,Double Rapid Staff Dance,,Single Enemy,2,Augment a single, random ally's speed for 2 turns.
+1,Sand Lizardman I,5-7,Attack,,Single Enemy,1,
+2,Sand Lizardman II,5-7,Attack All,,All Enemies,1,
+3,Sand Lizardman III,5-7,Double Strike,,Single Enemy,2,
+4,Sand Lizardman IV,5-7,Double Strike,,Single Enemy,2,
+4,Sand Lizardman V,5-7,Double Attack All,,All Enemies,2,
+5,Sand Lizardman VI,5-7,Triple Attack,,Single Enemy,3,
+5,Sandworm,1-5,Sand Strike (All),,All Enemies,1,Occasionally blinds all targets for 2 turns
+6,Savage Scorpion,5-7,Venomous Claw (All),,All Enemies,1,Occasionally poisons all targets for 2 turns
+2,Scaled Viper,5-7,Venomous Fang,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Scissor Crab,5-7,Freeze,,Single Enemy,1,
+6,Scythe Crab,5-7,Freeze,,Single Enemy,1,
+6,Sea Anemone,3-5,Poison Shot,,Single Enemy,1,Occasionally poisons target for 2 turns
+1,Sea Birdian I,5-7,Attack,,Single Enemy,1,
+2,Sea Birdian II,5-7,Attack All,,All Enemies,1,
+3,Sea Birdian III,5-7,Double Strike,,Single Enemy,2,
+4,Sea Birdian IV,5-7,Double Attack,,Single Enemy,2,
+4,Sea Birdian V,5-7,Double Attack All,,All Enemies,2,
+5,Sea Birdian VI,5-7,Triple Attack,,Single Enemy,3,
+5,Sea Birdking I,3-5,Triple Attack,,Single Enemy,3,
+6,Sea Birdking II,3-5,Triple Attack All,,All Enemies,3,
+7,Sea Birdking III,3-5,Striking Sword Dance,,Single Enemy,2,Augment a single, random ally's physical attack for 2 turns.
+5,Sea Scorpion,5-7,Steel Defenses,,Single Ally,,Augment a single, random ally's physical defense and elemental defense for 2(+1/BP) turns.
+4,Sea Slug,5-7,Blinding Mist (All),,All Enemies,,Occasionally blinds all targets for 4 turns.
+4,Sea Snake,5-7,Venomous Fang,,Single Enemy,1,Occasionally poisons target for 2 turns
+1,Sentinel,5-7,Chop,,Single Enemy,1,
+6,Sentinel Mk.II,5-7,Chop,,Single Enemy,1,
+4,Shadow Bat,5-7,Enshadow,,Single Enemy,1,
+6,Shadow Raven,5-7,Enshadow,,Single Enemy,1,
+6,Shadow Remnant Mk.II,3-5,Enshadow,,Single Enemy,1,
+10,Shadow Revenant,1-3,Eclipse Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+3,Shadow Wisp,5-7,Enshadow,,Single Enemy,1,
+4,Shaggy Aurochs,3-5,Mighty Lunge,,All Enemies,1,
+4,Shaggy Meep,5-7,Lunge,,Single Enemy,1,
+4,Shaggy Spider,3-5,Soporific Claw,,Single Enemy,1,Occasionally puts target to sleep for 2 turns
+4,Shambling Weed,5-7,Mighty Lunge,,All Enemies,1,
+7,Skulking Fungoid,3-5,Continual Light (HP),,Single Ally,,Restore 1000(+1000/BP) HP to a single ally.  Grants same ally 2 turns of HP Regeneration
+4,Skull Roller,5-7,Poison Strike,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Slayer Bug,5-7,Lunge,,Single Enemy,1,
+9,Snow Drake,3-5,Blizzard Breath (All),,All Enemies,1,Occasionally decreases all targets' Elem. Atk. for 2 turns
+2,Snow Fox,5-7,Freeze,,Single Enemy,1,
+7,Snow Leopard,3-5,Double Soporific Claw,,Single Enemy,2,Occasionally puts target to sleep for 2 turns
+4,Snow Lizard,5-7,Lunge,,Single Enemy,1,
+2,Snow Marmot,5-7,Slash,,Single Enemy,1,
+4,Snow Yak,3-5,Lunge,,Single Enemy,1,
+7,Spiked Skink,3-5,Hurricane Lunge (All),,All Enemies,1,Augment all allies' speed for 2(+1/BP) turns.
+7,Spud Bug,5-7,Lunge,,Single Enemy,1,
+4,Sticky Slug,3-5,Red Bile,,Single Enemy,,Occasionally decreases target's Elem. Atk. and/or Phys. Def. for 4 turns
+7,Stone Bug,5-7,Blinding Claw,,Single Enemy,1,Occasionally blinds target for 2 turns
+9,Stone Lizard,3-5,Hurricane Lunge (All),,All Enemies,1,Augment all allies' speed for 2(+1/BP) turns.
+7,Stone Serpent,3-5,Double Stab,,Single Enemy,2,
+4,Tempest Falcon,5-7,Wind Slash,,Single Enemy,1,
+6,Thunder Curator,3-5,Electrocute,,Single Enemy,1,
+7,Thunder Curator Mk.II,3-5,Electrocute,,Single Enemy,1,
+7,Thunder Guardian,3-5,Shock Stream,,Single Enemy,2,
+8,Thunder Guardian Mk.II,3-5,Electrocute (All),,All Enemies,1,
+7,Thunder Remnant,3-5,Electrocute,,Single Enemy,1,
+6,Thunder Remnant Mk.II,3-5,Electrocute,,Single Enemy,1,
+10,Thunder Revenant,1-3,Vortex Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+4,Thunder Sentinel,5-7,Electrocute,,Single Enemy,1,
+6,Thunder Sentinel Mk.II,5-7,Electrocute,,Single Enemy,1,
+4,Thunder Wisp,5-7,Electrocute,,Single Enemy,1,
+5,Two-handed Hatchling,5-7,Restore Greater Health,,Single Ally,,Restore 1000(+1000/BP) HP to a single ally.
+10,Tyrannodrake,1-3,Double-blind Attack (All),,All Enemies,2,Occasionally blinds all targets for 2 turns
+4,Vampire Bat,5-7,Soporific Fang,,Single Enemy,1,Occasionally puts target to sleep for 2 turns
+8,Venomous Scorpion,5-7,Venomous Claw (All),,All Enemies,1,Occasionally poisons all targets for 2 turns
+6,Wanderweed,3-5,Befuddling Shot (All),,All Enemies,1,Occasionally inflicts confusion on all targets for 2 turns
+4,War Dog,5-7,Slash,,Single Enemy,1,
+8,War Wolf,5-7,Double Stab,,Single Enemy,2,
+4,Warrior Bones,3-5,Slash,,Single Enemy,1,
+2,Warrior Wasp,5-7,Poison Shot,,Single Enemy,1,Occasionally poisons target for 2 turns
+2,White Bat,5-7,Stab,,Single Enemy,1,
+4,White Howler,5-7,Mighty Stab,,All Enemies,1,
+7,Wild Weasel,3-5,Convincing Blow,,Single Enemy,1,Augment a single, random ally's critical rate for 2 turns.
+4,Wind Curator,3-5,Wind Slash,,Single Enemy,1,
+7,Wind Curator Mk.II,3-5,Wind Slash,,Single Enemy,1,
+6,Wind Elemental,3-5,Wind Slash (All),,All Enemies,1,
+4,Wind Guardian,3-5,Wind Slash (All),,All Enemies,1,
+8,Wind Guardian Mk.II,3-5,Wind Slash (All),,All Enemies,1,
+7,Wind Remnant,3-5,Wind Slash,,Single Enemy,1,
+6,Wind Remnant Mk.II,3-5,Wind Slash,,Single Enemy,1,
+10,Wind Revenant,1-3,Tempest Clock (All),,All Enemies,1,Augment all allies' elemental attack and elemental defense for 2(+1/BP) turns.
+4,Wind Sentinel,5-7,Wind Slash,,Single Enemy,1,
+6,Wind Sentinel Mk.II,5-7,Wind Slash,,Single Enemy,1,
+4,Wind Wisp,5-7,Wind Slash,,Single Enemy,1,
+6,Winged Serpent,3-5,Toxic Wind,,Single Enemy,1,Occasionally poisons target for 2 turns
+4,Winter Wanderweed,3-5,Shoot,,Single Enemy,1,
+6,Withered Wanderweed,3-5,Soporific Shot (All),,All Enemies,1,Occasionally puts all targets to sleep for 2 turns
+2,Wolf,5-7,Stab,,Single Enemy,1,
+6,Woolly Spider,3-5,Soporific Claw,,Single Enemy,1,Occasionally puts target to sleep for 2 turns"
