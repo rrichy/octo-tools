@@ -10,8 +10,11 @@ interface Monster {
   location: string;
 }
 
+const MAX_PINS = 5;
+
 const keyword = ref("");
 const monsters = ref<Monster[]>([]);
+const pinnedMonsters = ref<Monster[]>([]);
 const weaknesses = ref<[Weakness, boolean | null][]>([
   ["axe", null],
   ["bow", null],
@@ -68,6 +71,17 @@ const filtered = computed(() => {
 
   return pre;
 });
+
+const togglePin = (monster: Monster) => {
+  const existsIndex = pinnedMonsters.value.findIndex(
+    (m) => m.index === monster.index,
+  );
+  if (existsIndex >= 0) {
+    pinnedMonsters.value.splice(existsIndex, 1);
+  } else {
+    pinnedMonsters.value.push(monster);
+  }
+};
 
 onMounted(async () => {
   const raw = await fetch("monster-weaknesses.csv").then((r) => r.text());
@@ -136,8 +150,41 @@ onMounted(async () => {
         </tr>
       </thead>
       <tbody>
+        <!-- PINNED -->
+        <tr v-for="item in pinnedMonsters" :key="item.index">
+          <td>
+            <button class="pin" @click.prevent="togglePin(item)">
+              <img src="/pin.svg" class="pin" alt="pin" />
+              {{ item.index }}
+            </button>
+          </td>
+          <td>{{ item.name }}</td>
+          <td>
+            <div class="weakness-wrapper">
+              <img
+                v-for="weakness in item.weaknesses"
+                :key="weakness"
+                :src="`/icons/${weakness}.jpg`"
+                class="weakness"
+                :alt="weakness"
+                :title="weakness"
+              />
+            </div>
+          </td>
+          <td>{{ item.location }}</td>
+        </tr>
+
+        <tr>
+          <td colspan="4"></td>
+        </tr>
+
         <tr v-for="item in filtered" :key="item.index">
-          <td>{{ item.index }}</td>
+          <td>
+            <button class="pin" @click.prevent="togglePin(item)">
+              <img src="/pin.svg" class="pin" alt="pin" />
+              {{ item.index }}
+            </button>
+          </td>
           <td>{{ item.name }}</td>
           <td>
             <div class="weakness-wrapper">
@@ -158,7 +205,6 @@ onMounted(async () => {
   </main>
 </template>
 
-<style scoped></style>
 <style>
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -186,8 +232,10 @@ onMounted(async () => {
   height: 1.5em;
 }
 
-.weakness-wrapper .weakness:not(:first-child) {
-  margin-left: 2px;
+.weakness-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 table {
@@ -214,8 +262,9 @@ td:nth-of-type(3) {
   width: 8rem;
 }
 
-td {
-  border: 1px solid black;
+td,
+th {
+  border: 1px solid #aaa;
 }
 
 input {
