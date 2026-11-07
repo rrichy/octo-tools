@@ -2,9 +2,16 @@
 import { computed, onMounted, ref } from "vue";
 import TriStateRadio from "./components/TriStateRadio.vue";
 import { Vulnerability } from "./types";
-import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
+import { Field, FieldLabel } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import {
   InputGroup,
   InputGroupAddon,
@@ -16,20 +23,11 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { XIcon, ChevronDown, CopyIcon, InfoIcon, StarIcon } from "@lucide/vue";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { XIcon, ChevronDown, StarIcon } from "@lucide/vue";
 import { SelectIcon } from "reka-ui";
 
 type Weakness = Vulnerability;
@@ -41,9 +39,6 @@ interface Monster {
   location: string;
 }
 
-const MAX_PINS = 5;
-
-const temp = ref<boolean | null>(null);
 const keyword = ref("");
 const location = ref("");
 const locations = ref<string[]>([]);
@@ -63,6 +58,9 @@ const weaknesses = ref<[Weakness, boolean | null][]>([
   ["lightning", null],
   ["wind", null],
 ]);
+const pinned = computed(
+  () => new Set(pinnedMonsters.value.map((m) => m.index)),
+);
 
 const appliedWeaknesses = computed(() =>
   weaknesses.value.filter((w) => w[1] === true).map((w) => w[0]),
@@ -247,137 +245,102 @@ onMounted(async () => {
         <Button variant="outline" @click="resetWeaknesses">Reset</Button>
       </CardFooter>
     </Card>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Name</th>
-          <th>Weakness</th>
-          <th>Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- PINNED -->
-        <tr v-for="item in pinnedMonsters" :key="item.index">
-          <td>
-            <button class="pin" @click.prevent="togglePin(item)">
-              <img src="/pin.svg" class="pin" alt="pin" />
-              {{ item.index }}
-            </button>
-          </td>
-          <td>{{ item.name }}</td>
-          <td>
-            <div class="weakness-wrapper">
+
+    <template v-if="pinnedMonsters.length > 0">
+      <div class="my-2">
+        <h4 class="text-sm font-bold leading-none">
+          PINNED
+          <span class="font-normal"
+            >{{ pinnedMonsters.length }} · always shown</span
+          >
+        </h4>
+      </div>
+
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>NAME</TableHead>
+            <TableHead>WEAKNESS</TableHead>
+            <TableHead> LOCATION </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow v-for="invoice in pinnedMonsters" :key="invoice.index">
+            <TableCell>
+              <div class="flex items-center gap-1">
+                <Button variant="ghost" size="icon" @click="togglePin(invoice)">
+                  <StarIcon fill="#eab308" color="#eab308" />
+                </Button>
+                {{ invoice.name }}
+              </div>
+            </TableCell>
+            <TableCell>
+              <div class="flex gap-1">
+                <img
+                  v-for="weakness in invoice.weaknesses"
+                  :key="weakness"
+                  :src="`/icons/${weakness}.jpg`"
+                  class="h-5"
+                  :alt="weakness"
+                  :title="weakness"
+                />
+              </div>
+            </TableCell>
+            <TableCell>
+              {{ invoice.location }}
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </template>
+
+    <div class="my-2">
+      <h4 class="text-sm font-bold leading-none">
+        RESULTS
+        <span class="font-normal">{{ filtered.length }} matches</span>
+      </h4>
+    </div>
+
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>NAME</TableHead>
+          <TableHead>WEAKNESS</TableHead>
+          <TableHead> LOCATION </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow v-for="m in filtered" :key="m.index">
+          <TableCell>
+            <div class="flex items-center gap-1">
+              <Button variant="ghost" size="icon" @click="togglePin(m)">
+                <StarIcon
+                  :fill="pinned.has(m.index) ? '#eab308' : 'transparent'"
+                  color="#eab308"
+                />
+              </Button>
+              {{ m.name }}
+            </div>
+          </TableCell>
+          <TableCell>
+            <div class="flex gap-1">
               <img
-                v-for="weakness in item.weaknesses"
+                v-for="weakness in m.weaknesses"
                 :key="weakness"
                 :src="`/icons/${weakness}.jpg`"
-                class="weakness"
+                class="h-5"
                 :alt="weakness"
                 :title="weakness"
               />
             </div>
-          </td>
-          <td>{{ item.location }}</td>
-        </tr>
-
-        <tr>
-          <td colspan="4"></td>
-        </tr>
-
-        <tr v-for="item in filtered" :key="item.index">
-          <td>
-            <button class="pin" @click.prevent="togglePin(item)">
-              <img src="/pin.svg" class="pin" alt="pin" />
-              {{ item.index }}
-            </button>
-          </td>
-          <td>{{ item.name }}</td>
-          <td>
-            <div class="weakness-wrapper">
-              <img
-                v-for="weakness in item.weaknesses"
-                :key="weakness"
-                :src="`/icons/${weakness}.jpg`"
-                class="weakness"
-                :alt="weakness"
-                :title="weakness"
-              />
-            </div>
-          </td>
-          <td>{{ item.location }}</td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+          <TableCell>
+            {{ m.location }}
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </main>
 </template>
 
-<style>
-.weakness {
-  height: 1.5em;
-}
-
-.weakness-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-table {
-  margin-top: 8px;
-  border-collapse: collapse;
-}
-
-td {
-  white-space: pre-line;
-  padding-right: 4px;
-  padding-left: 4px;
-}
-
-td:nth-of-type(1) {
-  text-align: right;
-  width: 2rem;
-}
-
-td:nth-of-type(2) {
-  width: 14rem;
-}
-
-td:nth-of-type(3) {
-  width: 8rem;
-}
-
-td,
-th {
-  border: 1px solid #aaa;
-}
-
-.weakness-filter {
-  margin: auto;
-  margin-top: 8px;
-}
-
-.weakness-selection {
-  position: absolute;
-  bottom: -4px;
-  right: -4px;
-  width: 20px;
-  height: 20px;
-}
-
-.weakness-btn {
-  cursor: pointer;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  position: relative;
-}
-.weakness-btn .weakness {
-  width: 2.5em;
-  height: 2.5em;
-}
-
-.weakness-btn:not(:first-child) {
-  margin-left: 4px;
-}
-</style>
+<style></style>

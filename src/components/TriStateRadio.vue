@@ -22,12 +22,7 @@ const title = computed(
     :color="value === true ? 'green' : value === false ? 'red' : 'primary'"
     @click="value = value === true ? false : value === false ? null : true"
   >
-    <img
-      :src="`/icons/${type}.jpg`"
-      class="weakness"
-      :alt="title"
-      :title="title"
-    />
+    <img :src="`/icons/${type}.jpg`" class="h-5" :alt="title" :title="title" />
     {{ title }}
     <component
       :is="value === true ? Include : value === false ? Exclude : Unset"
