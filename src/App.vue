@@ -2,6 +2,17 @@
 import { computed, onMounted, ref } from "vue";
 import TriStateRadio from "./components/TriStateRadio.vue";
 import { Vulnerability } from "./types";
+import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 type Weakness = Vulnerability;
 
@@ -111,13 +122,31 @@ onMounted(async () => {
 <template>
   <main class="container">
     <input v-model="keyword" placeholder="Filter..." />
-    <div class="flex gap-2">
-      <TriStateRadio
-        v-for="weakness in weaknesses"
-        :type="weakness[0]"
-        v-model="weakness[1]"
-      />
-    </div>
+    <Card class="w-full">
+      <CardContent>
+        <Field>
+          <FieldLabel> Vulnerability </FieldLabel>
+          <div class="flex gap-2 flex-wrap">
+            <TriStateRadio
+              v-for="weakness in weaknesses"
+              :type="weakness[0]"
+              v-model="weakness[1]"
+            />
+          </div>
+        </Field>
+      </CardContent>
+      <CardFooter class="flex justify-between">
+        <div class="text-sm whitespace-nowrap">
+          Tap to cycle:
+          <span class="font-bold">unset</span>
+          /
+          <span class="font-bold text-green-500">+ include</span>
+          /
+          <span class="font-bold text-red-400">- exclude</span>
+        </div>
+        <Button variant="outline">Reset</Button>
+      </CardFooter>
+    </Card>
     <table>
       <thead>
         <tr>
