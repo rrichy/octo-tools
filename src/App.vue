@@ -4,6 +4,16 @@ import TriStateRadio from "./components/TriStateRadio.vue";
 import { Vulnerability } from "./types";
 import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Card,
   CardAction,
@@ -27,6 +37,8 @@ const MAX_PINS = 5;
 
 const temp = ref<boolean | null>(null);
 const keyword = ref("");
+const location = ref("");
+const locations = ref<string[]>([]);
 const monsters = ref<Monster[]>([]);
 const pinnedMonsters = ref<Monster[]>([]);
 const weaknesses = ref<[Weakness, boolean | null][]>([
@@ -54,18 +66,24 @@ const hideWeaknesses = computed(() =>
 const filtered = computed(() => {
   if (
     !keyword.value &&
+    !location.value &&
     !appliedWeaknesses.value.length &&
     !hideWeaknesses.value.length
   )
     return monsters.value;
 
-  const lowerCase = keyword.value.toLowerCase();
+  let pre = monsters.value;
 
-  let pre = monsters.value.filter(
-    (monster) =>
-      monster.name.toLowerCase().includes(lowerCase) ||
-      monster.location.toLowerCase().includes(lowerCase),
-  );
+  if (keyword.value) {
+    const lowerCase = keyword.value.toLowerCase();
+    pre = pre.filter((monster) =>
+      monster.name.toLowerCase().includes(lowerCase),
+    );
+  }
+
+  if (location.value) {
+    pre = pre.filter((monster) => monster.location.includes(location.value));
+  }
 
   if (appliedWeaknesses.value.length) {
     pre = pre.filter((monster) =>
@@ -116,16 +134,43 @@ onMounted(async () => {
       ],
       [] as Monster[],
     );
+  locations.value = Array.from(
+    new Set(monsters.value.flatMap((m) => m.location.split("\n"))),
+  );
 });
 </script>
 
 <template>
   <main class="container">
-    <input v-model="keyword" placeholder="Filter..." />
+    <div class="flex justify-between gap-2">
+      <Field>
+        <FieldLabel class="text-xs"> MONSTER NAME </FieldLabel>
+        <Input v-model="keyword" placeholder="Filter by name..." />
+      </Field>
+      <Field>
+        <FieldLabel class="text-xs"> LOCATION </FieldLabel>
+        <Select v-model="location">
+          <SelectTrigger>
+            <SelectValue placeholder="Filter by location" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem
+                v-for="location in locations"
+                :key="location"
+                :value="location"
+              >
+                {{ location }}
+              </SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </Field>
+    </div>
     <Card class="w-full">
       <CardContent>
         <Field>
-          <FieldLabel> Vulnerability </FieldLabel>
+          <FieldLabel class="text-xs"> VULNERABILITY </FieldLabel>
           <div class="flex gap-2 flex-wrap">
             <TriStateRadio
               v-for="weakness in weaknesses"
