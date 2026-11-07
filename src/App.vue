@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
+import TriStateRadio from "./components/TriStateRadio.vue";
+import { Vulnerability } from "./types";
 
-type Weakness = string;
+type Weakness = Vulnerability;
 
 interface Monster {
   index: number;
@@ -12,6 +14,7 @@ interface Monster {
 
 const MAX_PINS = 5;
 
+const temp = ref<boolean | null>(null);
 const keyword = ref("");
 const monsters = ref<Monster[]>([]);
 const pinnedMonsters = ref<Monster[]>([]);
@@ -96,7 +99,7 @@ onMounted(async () => {
         {
           index: index + 1,
           name: row[0],
-          weaknesses: row.slice(1, 6).filter(Boolean),
+          weaknesses: row.slice(1, 6).filter(Boolean) as Weakness[],
           location: row[6],
         },
       ],
@@ -108,37 +111,12 @@ onMounted(async () => {
 <template>
   <main class="container">
     <input v-model="keyword" placeholder="Filter..." />
-    <div class="weakness-filter">
-      <button
+    <div class="flex gap-2">
+      <TriStateRadio
         v-for="weakness in weaknesses"
-        :key="weakness[0]"
-        class="weakness-btn"
-        @click.prevent="
-          weakness[1] =
-            weakness[1] === true ? false : weakness[1] === false ? null : true
-        "
-      >
-        <img
-          :src="`/icons/${weakness[0]}.jpg`"
-          class="weakness"
-          :alt="weakness[0]"
-          :title="weakness[0]"
-        />
-
-        <img
-          v-if="weakness[1] === true"
-          src="/include.svg"
-          class="weakness-selection"
-          alt="include"
-        />
-        <img
-          v-else-if="weakness[1] === false"
-          src="/exclude.svg"
-          class="weakness-selection"
-          alt="exclude"
-        />
-        <img v-else src="/unset.svg" class="weakness-selection" alt="unset" />
-      </button>
+        :type="weakness[0]"
+        v-model="weakness[1]"
+      />
     </div>
     <table>
       <thead>
@@ -206,27 +184,27 @@ onMounted(async () => {
 </template>
 
 <style>
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+/* :root { */
+/*   font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+/*   font-size: 16px; */
+/*   font-weight: 400; */
+/**/
+/*   color: #0f0f0f; */
+/*   background-color: #f6f6f6; */
+/**/
+/*   font-synthesis: none; */
+/*   text-rendering: optimizeLegibility; */
+/*   -webkit-font-smoothing: antialiased; */
+/*   -moz-osx-font-smoothing: grayscale; */
+/*   -webkit-text-size-adjust: 100%; */
+/* } */
 
-  color: #0f0f0f;
-  background-color: #f6f6f6;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-.container {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* .container { */
+/*   margin: 0; */
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   justify-content: center; */
+/* } */
 
 .weakness {
   height: 1.5em;
@@ -267,18 +245,18 @@ th {
   border: 1px solid #aaa;
 }
 
-input {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  color: #0f0f0f;
-  background-color: #ffffff;
-  transition: border-color 0.25s;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-}
+/* input { */
+/*   border-radius: 8px; */
+/*   border: 1px solid transparent; */
+/*   padding: 0.6em 1.2em; */
+/*   font-size: 1em; */
+/*   font-weight: 500; */
+/*   font-family: inherit; */
+/*   color: #0f0f0f; */
+/*   background-color: #ffffff; */
+/*   transition: border-color 0.25s; */
+/*   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
+/* } */
 
 .weakness-filter {
   margin: auto;
@@ -307,36 +285,5 @@ input {
 
 .weakness-btn:not(:first-child) {
   margin-left: 4px;
-}
-
-/* button:hover { */
-/*   border-color: #396cd8; */
-/* } */
-/* button:active { */
-/*   border-color: #396cd8; */
-/*   background-color: #e8e8e8; */
-/* } */
-
-input {
-  outline: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
-
-  a:hover {
-    color: #24c8db;
-  }
-
-  input {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-  /* button:active { */
-  /*   background-color: #0f0f0f69; */
-  /* } */
 }
 </style>

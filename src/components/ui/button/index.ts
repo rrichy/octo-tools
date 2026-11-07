@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 
@@ -11,8 +12,10 @@ export const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline:
+        outline: cn(
           "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "text-(--text-color) hover:text-(--text-color) border-(--border-color) bg-(--bg-color)/10 hover:bg-(--bg-color)/20",
+        ),
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost:
@@ -29,13 +32,18 @@ export const buttonVariants = cva(
         "icon-sm": "size-8",
         "icon-lg": "size-10",
       },
-      // color: {
-      //   green: "[--btn-color:#4ade80]",
-      // },
+      color: {
+        primary:
+          "[--border-color:var(--border)] [--text-color:var(--primary)] [--bg-color:var(--background)]",
+        green:
+          "[--border-color:var(--color-green-500)] [--text-color:var(--color-green-500)] [--bg-color:var(--color-green-500)]",
+        red: "[--border-color:var(--color-red-400)] [--text-color:var(--color-red-400)] [--bg-color:var(--color-red-400)]",
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      color: "primary",
     },
   },
 );
