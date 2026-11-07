@@ -6,6 +6,12 @@ import { Field, FieldLabel, FieldDescription } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+} from "@/components/ui/input-group";
+import {
   Select,
   SelectContent,
   SelectGroup,
@@ -23,6 +29,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { XIcon, ChevronDown, CopyIcon, InfoIcon, StarIcon } from "@lucide/vue";
+import { SelectIcon } from "reka-ui";
 
 type Weakness = Vulnerability;
 
@@ -115,6 +123,23 @@ const togglePin = (monster: Monster) => {
   }
 };
 
+const resetWeaknesses = () => {
+  weaknesses.value = [
+    ["axe", null],
+    ["bow", null],
+    ["dagger", null],
+    ["spear", null],
+    ["staff", null],
+    ["sword", null],
+    ["dark", null],
+    ["fire", null],
+    ["ice", null],
+    ["light", null],
+    ["lightning", null],
+    ["wind", null],
+  ];
+};
+
 onMounted(async () => {
   const raw = await fetch("monster-weaknesses.csv").then((r) => r.text());
   monsters.value = raw
@@ -145,13 +170,43 @@ onMounted(async () => {
     <div class="flex justify-between gap-2">
       <Field>
         <FieldLabel class="text-xs"> MONSTER NAME </FieldLabel>
-        <Input v-model="keyword" placeholder="Filter by name..." />
+        <InputGroup>
+          <InputGroupInput v-model="keyword" placeholder="Filter by name..." />
+          <InputGroupAddon align="inline-end">
+            <InputGroupButton
+              aria-label="Clear"
+              title="Clear"
+              size="icon-xs"
+              @click="keyword = ''"
+            >
+              <XIcon v-if="!!keyword" />
+            </InputGroupButton>
+          </InputGroupAddon>
+        </InputGroup>
       </Field>
       <Field>
         <FieldLabel class="text-xs"> LOCATION </FieldLabel>
         <Select v-model="location">
           <SelectTrigger>
             <SelectValue placeholder="Filter by location" />
+            <template v-slot:addon>
+              <div class="flex gap-2 items-center">
+                <Button
+                  v-if="!!location"
+                  aria-label="Clear"
+                  title="Clear"
+                  size="icon-xs"
+                  variant="ghost"
+                  @pointerdown.stop.prevent
+                  @click.prevent="location = ''"
+                >
+                  <XIcon />
+                </Button>
+                <SelectIcon as-child>
+                  <ChevronDown class="size-4 opacity-50" />
+                </SelectIcon>
+              </div>
+            </template>
           </SelectTrigger>
           <SelectContent>
             <SelectGroup>
@@ -189,7 +244,7 @@ onMounted(async () => {
           /
           <span class="font-bold text-red-400">- exclude</span>
         </div>
-        <Button variant="outline">Reset</Button>
+        <Button variant="outline" @click="resetWeaknesses">Reset</Button>
       </CardFooter>
     </Card>
     <table>
@@ -258,28 +313,6 @@ onMounted(async () => {
 </template>
 
 <style>
-/* :root { */
-/*   font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-/*   font-size: 16px; */
-/*   font-weight: 400; */
-/**/
-/*   color: #0f0f0f; */
-/*   background-color: #f6f6f6; */
-/**/
-/*   font-synthesis: none; */
-/*   text-rendering: optimizeLegibility; */
-/*   -webkit-font-smoothing: antialiased; */
-/*   -moz-osx-font-smoothing: grayscale; */
-/*   -webkit-text-size-adjust: 100%; */
-/* } */
-
-/* .container { */
-/*   margin: 0; */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   justify-content: center; */
-/* } */
-
 .weakness {
   height: 1.5em;
 }
@@ -318,19 +351,6 @@ td,
 th {
   border: 1px solid #aaa;
 }
-
-/* input { */
-/*   border-radius: 8px; */
-/*   border: 1px solid transparent; */
-/*   padding: 0.6em 1.2em; */
-/*   font-size: 1em; */
-/*   font-weight: 500; */
-/*   font-family: inherit; */
-/*   color: #0f0f0f; */
-/*   background-color: #ffffff; */
-/*   transition: border-color 0.25s; */
-/*   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); */
-/* } */
 
 .weakness-filter {
   margin: auto;
