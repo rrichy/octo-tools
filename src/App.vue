@@ -5,7 +5,7 @@ import WeaknessTable from "@/components/WeaknessTable.vue";
 import { defaultWeaknesses } from "@/utils/default-weakness";
 import { Monster, Weakness } from "@/types";
 import { Button } from "@/components/ui/button";
-import { StarIcon } from "@lucide/vue";
+import { StarIcon, PlusIcon } from "@lucide/vue";
 import {
   Popover,
   PopoverContent,
@@ -83,6 +83,7 @@ const togglePin = (monster: Monster) => {
 
 onMounted(async () => {
   const raw = await fetch("monster-weaknesses.csv").then((r) => r.text());
+  // TODO: fetch added monsters too and merge
   monsters.value = raw
     .trim()
     .split("\n")
@@ -99,10 +100,11 @@ onMounted(async () => {
         },
       ],
       [] as Monster[],
-    );
+    )
+    .sort((a, b) => a.name.localeCompare(b.name));
   locations.value = Array.from(
     new Set(monsters.value.flatMap((m) => m.location.split("\n"))),
-  );
+  ).sort();
 });
 </script>
 
@@ -122,29 +124,41 @@ onMounted(async () => {
       @toggle-pin="togglePin"
     />
 
-    <Popover>
-      <PopoverTrigger as-child>
-        <Button size="icon-lg" class="fixed right-2 bottom-2">
-          <StarIcon
-            v-if="!pinnedMonsters.length"
-            fill="#eab308"
-            color="#eab308"
+    <div class="fixed right-2 bottom-2 flex flex-col gap-2">
+      <Popover>
+        <PopoverTrigger as-child>
+          <Button size="icon-lg" class="bg-green-400 hover:bg-green-400/80">
+            <PlusIcon :stroke-width="5" color="#1a2e05" />
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent side="right" :side-offset="8" align="end" class="w-fit">
+        </PopoverContent>
+      </Popover>
+
+      <Popover>
+        <PopoverTrigger as-child>
+          <Button size="icon-lg">
+            <StarIcon
+              v-if="!pinnedMonsters.length"
+              fill="#eab308"
+              color="#eab308"
+            />
+            <span v-else class="text-yellow-400 font-bold">{{
+              pinnedMonsters.length
+            }}</span>
+          </Button>
+        </PopoverTrigger>
+        <PopoverContent side="right" :side-offset="8" align="end" class="w-fit">
+          <WeaknessTable
+            v-if="pinnedMonsters.length"
+            pin-table
+            :monsters="pinnedMonsters"
+            @toggle-pin="togglePin"
           />
-          <span v-else class="text-yellow-400 font-bold">{{
-            pinnedMonsters.length
-          }}</span>
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent side="right" :side-offset="8" align="end" class="w-fit">
-        <WeaknessTable
-          v-if="pinnedMonsters.length"
-          pin-table
-          :monsters="pinnedMonsters"
-          @toggle-pin="togglePin"
-        />
-        <span v-else> Pinned monsters are displayed here </span>
-      </PopoverContent>
-    </Popover>
+          <span v-else> Pinned monsters are displayed here </span>
+        </PopoverContent>
+      </Popover>
+    </div>
   </main>
 </template>
 
