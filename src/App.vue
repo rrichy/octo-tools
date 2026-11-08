@@ -1,46 +1,16 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
-import { Vulnerability } from "./types";
-import { Button } from "@/components/ui/button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { StarIcon } from "@lucide/vue";
-import Filter from "./Filter.vue";
-
-type Weakness = Vulnerability;
-
-interface Monster {
-  index: number;
-  name: string;
-  weaknesses: Weakness[];
-  location: string;
-}
+import Filter from "@/components/Filter.vue";
+import WeaknessTable from "@/components/WeaknessTable.vue";
+import { defaultWeaknesses } from "@/utils/default-weakness";
+import { Monster, Weakness } from "@/types";
 
 const keyword = ref("");
 const location = ref("");
 const locations = ref<string[]>([]);
 const monsters = ref<Monster[]>([]);
 const pinnedMonsters = ref<Monster[]>([]);
-const weaknesses = ref<[Weakness, boolean | null][]>([
-  ["axe", null],
-  ["bow", null],
-  ["dagger", null],
-  ["spear", null],
-  ["staff", null],
-  ["sword", null],
-  ["dark", null],
-  ["fire", null],
-  ["ice", null],
-  ["light", null],
-  ["lightning", null],
-  ["wind", null],
-]);
+const weaknesses = ref<[Weakness, boolean | null][]>(defaultWeaknesses());
 const pinned = computed(
   () => new Set(pinnedMonsters.value.map((m) => m.index)),
 );
@@ -138,100 +108,18 @@ onMounted(async () => {
       :locations="locations"
     />
 
-    <template v-if="pinnedMonsters.length > 0">
-      <div class="my-2">
-        <h4 class="text-sm font-bold leading-none">
-          PINNED
-          <span class="font-normal"
-            >{{ pinnedMonsters.length }} · always shown</span
-          >
-        </h4>
-      </div>
+    <WeaknessTable
+      v-if="pinnedMonsters.length"
+      pin-table
+      :monsters="pinnedMonsters"
+      @toggle-pin="togglePin"
+    />
 
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>NAME</TableHead>
-            <TableHead>WEAKNESS</TableHead>
-            <TableHead> LOCATION </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          <TableRow v-for="invoice in pinnedMonsters" :key="invoice.index">
-            <TableCell>
-              <div class="flex items-center gap-1">
-                <Button variant="ghost" size="icon" @click="togglePin(invoice)">
-                  <StarIcon fill="#eab308" color="#eab308" />
-                </Button>
-                {{ invoice.name }}
-              </div>
-            </TableCell>
-            <TableCell>
-              <div class="flex gap-1">
-                <img
-                  v-for="weakness in invoice.weaknesses"
-                  :key="weakness"
-                  :src="`/icons/${weakness}.jpg`"
-                  class="h-5"
-                  :alt="weakness"
-                  :title="weakness"
-                />
-              </div>
-            </TableCell>
-            <TableCell>
-              {{ invoice.location }}
-            </TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </template>
-
-    <div class="my-2">
-      <h4 class="text-sm font-bold leading-none">
-        RESULTS
-        <span class="font-normal">{{ filtered.length }} matches</span>
-      </h4>
-    </div>
-
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>NAME</TableHead>
-          <TableHead>WEAKNESS</TableHead>
-          <TableHead> LOCATION </TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        <TableRow v-for="m in filtered" :key="m.index">
-          <TableCell>
-            <div class="flex items-center gap-1">
-              <Button variant="ghost" size="icon" @click="togglePin(m)">
-                <StarIcon
-                  :fill="pinned.has(m.index) ? '#eab308' : 'transparent'"
-                  color="#eab308"
-                />
-              </Button>
-              {{ m.name }}
-            </div>
-          </TableCell>
-          <TableCell>
-            <div class="flex gap-1">
-              <img
-                v-for="weakness in m.weaknesses"
-                :key="weakness"
-                :src="`/icons/${weakness}.jpg`"
-                class="h-5"
-                :alt="weakness"
-                :title="weakness"
-              />
-            </div>
-          </TableCell>
-          <TableCell>
-            {{ m.location }}
-          </TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+    <WeaknessTable
+      :monsters="filtered"
+      :pinned="pinned"
+      @toggle-pin="togglePin"
+    />
   </main>
 </template>
 
