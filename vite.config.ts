@@ -3,11 +3,13 @@ import vue from "@vitejs/plugin-vue";
 import process from "node:process";
 import tailwindcss from "@tailwindcss/vite";
 import path from "node:path";
+import vueDevTools from "vite-plugin-vue-devtools";
+
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vite.dev/config/
 export default defineConfig(() => ({
-  plugins: [vue(), tailwindcss()],
+  plugins: [vue(), tailwindcss(), vueDevTools()],
 
   // tailwindcss
   resolve: {
