@@ -12,6 +12,7 @@ fn get_monster_weaknesses_list(keyword: &str) {
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_opener::init())
         .invoke_handler(tauri::generate_handler![greet])
         .invoke_handler(tauri::generate_handler![get_monster_weaknesses_list])

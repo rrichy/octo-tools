@@ -11,16 +11,32 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  exists,
+  mkdir,
+  readTextFile,
+  writeTextFile,
+  BaseDirectory,
+} from "@tauri-apps/plugin-fs";
+
+import csv from "./monster-weaknesses.csv?raw";
+
+const configFilename = "octo-tools.config.json";
+
+interface Config {
+  pinned: Monster[];
+}
 
 const keyword = ref("");
 const location = ref("");
 const locations = ref<string[]>([]);
 const monsters = ref<Monster[]>([]);
-const pinnedMonsters = ref<Monster[]>([]);
+// const pinnedMonsters = ref<Monster[]>([]);
 const weaknesses = ref<[Weakness, boolean | null][]>(defaultWeaknesses());
-const pinned = computed(
-  () => new Set(pinnedMonsters.value.map((m) => m.index)),
-);
+const config = ref<Config>({
+  pinned: [],
+});
+const pinned = computed(() => new Set(config.value.pinned.map((m) => m.index)));
 
 const appliedWeaknesses = computed(() =>
   weaknesses.value.filter((w) => w[1] === true).map((w) => w[0]),
@@ -70,21 +86,44 @@ const filtered = computed(() => {
   return pre;
 });
 
-const togglePin = (monster: Monster) => {
-  const existsIndex = pinnedMonsters.value.findIndex(
+const togglePin = async (monster: Monster) => {
+  const existsIndex = config.value.pinned.findIndex(
     (m) => m.index === monster.index,
   );
   if (existsIndex >= 0) {
-    pinnedMonsters.value.splice(existsIndex, 1);
+    config.value.pinned.splice(existsIndex, 1);
   } else {
-    pinnedMonsters.value.push(monster);
+    config.value.pinned.push(monster);
+  }
+  await saveConfig();
+};
+
+const getExistingConfig = async () => {
+  if (await exists(configFilename, { baseDir: BaseDirectory.AppCache })) {
+    const configFile = await readTextFile(configFilename, {
+      baseDir: BaseDirectory.AppCache,
+    });
+    config.value = JSON.parse(configFile) as Config;
   }
 };
 
+const saveConfig = async () => {
+  await mkdir("", { baseDir: BaseDirectory.AppCache, recursive: true });
+  await writeTextFile(configFilename, JSON.stringify(config.value, null, 2), {
+    baseDir: BaseDirectory.AppCache,
+  });
+};
+
 onMounted(async () => {
-  const raw = await fetch("monster-weaknesses.csv").then((r) => r.text());
+  try {
+    await getExistingConfig();
+  } catch (error) {
+    console.warn("Config file does not exists. Creating one.");
+    await saveConfig();
+  }
+
   // TODO: fetch added monsters too and merge
-  monsters.value = raw
+  monsters.value = csv
     .trim()
     .split("\n")
     .map((line) => line.replace(/\\n/, "\n").split(","))
@@ -102,6 +141,7 @@ onMounted(async () => {
       [] as Monster[],
     )
     .sort((a, b) => a.name.localeCompare(b.name));
+
   locations.value = Array.from(
     new Set(monsters.value.flatMap((m) => m.location.split("\n"))),
   ).sort();
@@ -139,20 +179,20 @@ onMounted(async () => {
         <PopoverTrigger as-child>
           <Button size="icon-lg">
             <StarIcon
-              v-if="!pinnedMonsters.length"
+              v-if="!config.pinned.length"
               fill="#eab308"
               color="#eab308"
             />
             <span v-else class="text-yellow-400 font-bold">{{
-              pinnedMonsters.length
+              config.pinned.length
             }}</span>
           </Button>
         </PopoverTrigger>
         <PopoverContent side="right" :side-offset="8" align="end" class="w-fit">
           <WeaknessTable
-            v-if="pinnedMonsters.length"
+            v-if="config.pinned.length"
             pin-table
-            :monsters="pinnedMonsters"
+            :monsters="config.pinned"
             @toggle-pin="togglePin"
           />
           <span v-else> Pinned monsters are displayed here </span>
