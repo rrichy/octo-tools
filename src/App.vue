@@ -4,6 +4,13 @@ import Filter from "@/components/Filter.vue";
 import WeaknessTable from "@/components/WeaknessTable.vue";
 import { defaultWeaknesses } from "@/utils/default-weakness";
 import { Monster, Weakness } from "@/types";
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "@lucide/vue";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 const keyword = ref("");
 const location = ref("");
@@ -100,7 +107,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <main class="px-4 py-3">
+  <main class="px-4 py-3 relative">
     <Filter
       v-model:keyword="keyword"
       v-model:location="location"
@@ -109,17 +116,35 @@ onMounted(async () => {
     />
 
     <WeaknessTable
-      v-if="pinnedMonsters.length"
-      pin-table
-      :monsters="pinnedMonsters"
-      @toggle-pin="togglePin"
-    />
-
-    <WeaknessTable
+      class="mt-4"
       :monsters="filtered"
       :pinned="pinned"
       @toggle-pin="togglePin"
     />
+
+    <Popover>
+      <PopoverTrigger as-child>
+        <Button size="icon-lg" class="fixed right-2 bottom-2">
+          <StarIcon
+            v-if="!pinnedMonsters.length"
+            fill="#eab308"
+            color="#eab308"
+          />
+          <span v-else class="text-yellow-400 font-bold">{{
+            pinnedMonsters.length
+          }}</span>
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent side="right" :side-offset="8" align="end" class="w-fit">
+        <WeaknessTable
+          v-if="pinnedMonsters.length"
+          pin-table
+          :monsters="pinnedMonsters"
+          @toggle-pin="togglePin"
+        />
+        <span v-else> Pinned monsters are displayed here </span>
+      </PopoverContent>
+    </Popover>
   </main>
 </template>
 
