@@ -15,10 +15,10 @@ withDefaults(
   defineProps<{
     monsters: Monster[];
     pinTable?: boolean;
-    pinned?: Set<number>;
+    pinned?: number[];
   }>(),
   {
-    pinned: () => new Set<number>(),
+    pinned: () => [],
   },
 );
 defineEmits<{
@@ -60,7 +60,7 @@ defineEmits<{
               >
                 <StarIcon
                   :fill="
-                    pinTable || pinned.has(monster.index)
+                    pinTable || pinned.includes(monster.index)
                       ? '#eab308'
                       : 'transparent'
                   "

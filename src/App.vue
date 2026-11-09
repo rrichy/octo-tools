@@ -23,20 +23,25 @@ import csv from "./monster-weaknesses.csv?raw";
 
 const configFilename = "octo-tools.config.json";
 
+type Index = number;
+
 interface Config {
-  pinned: Monster[];
+  pinned: Index[];
+  added: Monster[];
 }
 
 const keyword = ref("");
 const location = ref("");
 const locations = ref<string[]>([]);
 const monsters = ref<Monster[]>([]);
-// const pinnedMonsters = ref<Monster[]>([]);
 const weaknesses = ref<[Weakness, boolean | null][]>(defaultWeaknesses());
 const config = ref<Config>({
   pinned: [],
+  added: [],
 });
-const pinned = computed(() => new Set(config.value.pinned.map((m) => m.index)));
+const pinned = computed(() =>
+  config.value.pinned.map((index) => monsters.value[index]),
+);
 
 const appliedWeaknesses = computed(() =>
   weaknesses.value.filter((w) => w[1] === true).map((w) => w[0]),
@@ -87,13 +92,13 @@ const filtered = computed(() => {
 });
 
 const togglePin = async (monster: Monster) => {
-  const existsIndex = config.value.pinned.findIndex(
-    (m) => m.index === monster.index,
-  );
-  if (existsIndex >= 0) {
-    config.value.pinned.splice(existsIndex, 1);
+  const indexExists = config.value.pinned.includes(monster.index);
+  if (indexExists) {
+    config.value.pinned = config.value.pinned.filter(
+      (m) => m !== monster.index,
+    );
   } else {
-    config.value.pinned.push(monster);
+    config.value.pinned.push(monster.index);
   }
   await saveConfig();
 };
@@ -103,7 +108,11 @@ const getExistingConfig = async () => {
     const configFile = await readTextFile(configFilename, {
       baseDir: BaseDirectory.AppCache,
     });
-    config.value = JSON.parse(configFile) as Config;
+    const _config = JSON.parse(configFile) as Config;
+    config.value = {
+      pinned: _config.pinned ?? [],
+      added: _config.added ?? [],
+    };
   }
 };
 
@@ -122,25 +131,28 @@ onMounted(async () => {
     await saveConfig();
   }
 
-  // TODO: fetch added monsters too and merge
-  monsters.value = csv
-    .trim()
-    .split("\n")
-    .map((line) => line.replace(/\\n/, "\n").split(","))
-    .slice(1)
-    .reduce(
-      (acc, row, index) => [
-        ...acc,
-        {
-          index: index + 1,
-          name: row[0],
-          weaknesses: row.slice(1, 6).filter(Boolean) as Weakness[],
-          location: row[6],
-        },
-      ],
-      [] as Monster[],
-    )
-    .sort((a, b) => a.name.localeCompare(b.name));
+  monsters.value = [
+    ...csv
+      .trim()
+      .split("\n")
+      .map((line) => line.replace(/\\n/, "\n").split(","))
+      .slice(1)
+      .reduce(
+        (acc, row) => [
+          ...acc,
+          {
+            index: -1,
+            name: row[0],
+            weaknesses: row.slice(1, 6).filter(Boolean) as Weakness[],
+            location: row[6],
+          },
+        ],
+        [] as Monster[],
+      )
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((m, index) => ({ ...m, index })),
+    ...config.value.added,
+  ];
 
   locations.value = Array.from(
     new Set(monsters.value.flatMap((m) => m.location.split("\n"))),
@@ -160,7 +172,7 @@ onMounted(async () => {
     <WeaknessTable
       class="mt-4"
       :monsters="filtered"
-      :pinned="pinned"
+      :pinned="config.pinned"
       @toggle-pin="togglePin"
     />
 
@@ -192,7 +204,7 @@ onMounted(async () => {
           <WeaknessTable
             v-if="config.pinned.length"
             pin-table
-            :monsters="config.pinned"
+            :monsters="pinned"
             @toggle-pin="togglePin"
           />
           <span v-else> Pinned monsters are displayed here </span>
